@@ -1,4 +1,3 @@
-cat > CLAUDE.md << 'EOF'
 # FinishLine
 
 アニメの完走予測サービス。
@@ -27,4 +26,9 @@ cat > CLAUDE.md << 'EOF'
 ## 進め方
 Phase 0 の Go 判定が出るまで Phase 1 以降に着手しない。
 1フェーズずつ実行し、完了したら停止して報告すること。
-EOF
+
+### 再現性
+- .gitignore で除外する生成物は、生成スクリプトを必ずコミットする
+- ノートブックでアドホックに作った成果物を本番に使わない
+- data/processed/ は scripts/build_lookups.py で完全に再生成できること
+- モデルは scripts/train_model.py で再学習できること
