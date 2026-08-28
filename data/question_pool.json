@@ -1,0 +1,3493 @@
+[
+  {
+    "title": "逆転裁判 ～その「真実」、異議あり！～",
+    "anime_id": 31630,
+    "year": 2016,
+    "episodes": 24,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Mystery",
+      "Police"
+    ],
+    "completion_rate": 0.4964,
+    "split_score": 1.0
+  },
+  {
+    "title": "戦国コレクション",
+    "anime_id": 12611,
+    "year": 2012,
+    "episodes": 26,
+    "genres": [
+      "Fantasy",
+      "Parody",
+      "Samurai"
+    ],
+    "completion_rate": 0.4805,
+    "split_score": 0.9989
+  },
+  {
+    "title": "きらりん☆レボリューション",
+    "anime_id": 1516,
+    "year": 2006,
+    "episodes": 153,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance",
+      "Shoujo"
+    ],
+    "completion_rate": 0.4762,
+    "split_score": 0.9984
+  },
+  {
+    "title": "TRICKSTER -江戸川乱歩「少年探偵団」より-",
+    "anime_id": 33377,
+    "year": 2016,
+    "episodes": 24,
+    "genres": [
+      "Sci-Fi",
+      "Mystery",
+      "Psychological",
+      "Drama"
+    ],
+    "completion_rate": 0.4661,
+    "split_score": 0.9967
+  },
+  {
+    "title": "サクラダリセット",
+    "anime_id": 34102,
+    "year": 2017,
+    "episodes": 24,
+    "genres": [
+      "Mystery",
+      "Super Power",
+      "Supernatural",
+      "School"
+    ],
+    "completion_rate": 0.5392,
+    "split_score": 0.9956
+  },
+  {
+    "title": "メガネブ!",
+    "anime_id": 19257,
+    "year": 2013,
+    "episodes": 12,
+    "genres": [
+      "Comedy",
+      "School",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.5404,
+    "split_score": 0.9953
+  },
+  {
+    "title": "スタ☆スカ",
+    "anime_id": 7705,
+    "year": 2010,
+    "episodes": 26,
+    "genres": [
+      "Harem",
+      "School",
+      "Shoujo"
+    ],
+    "completion_rate": 0.5483,
+    "split_score": 0.9933
+  },
+  {
+    "title": "ペット",
+    "anime_id": 37522,
+    "year": 2020,
+    "episodes": 13,
+    "genres": [
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Seinen"
+    ],
+    "completion_rate": 0.552,
+    "split_score": 0.9922
+  },
+  {
+    "title": "しろくまカフェ",
+    "anime_id": 12815,
+    "year": 2012,
+    "episodes": 50,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Josei"
+    ],
+    "completion_rate": 0.4365,
+    "split_score": 0.9883
+  },
+  {
+    "title": "アクティヴレイド　－機動強襲室第八係－",
+    "anime_id": 31790,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Comedy",
+      "Mecha",
+      "Police",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.5642,
+    "split_score": 0.9881
+  },
+  {
+    "title": "URAHARA",
+    "anime_id": 35250,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Psychological",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.4354,
+    "split_score": 0.9879
+  },
+  {
+    "title": "美少女戦士セーラームーン Crystal",
+    "anime_id": 14751,
+    "year": 2014,
+    "episodes": 26,
+    "genres": [
+      "Demons",
+      "Magic",
+      "Romance",
+      "Shoujo"
+    ],
+    "completion_rate": 0.5679,
+    "split_score": 0.9866
+  },
+  {
+    "title": "歌舞伎町シャーロック",
+    "anime_id": 38161,
+    "year": 2019,
+    "episodes": 24,
+    "genres": [
+      "Mystery",
+      "Comedy",
+      "Drama"
+    ],
+    "completion_rate": 0.5696,
+    "split_score": 0.986
+  },
+  {
+    "title": "BLEACH - ブリーチ -",
+    "anime_id": 269,
+    "year": 2004,
+    "episodes": 366,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Super Power",
+      "Supernatural",
+      "Shounen"
+    ],
+    "completion_rate": 0.5753,
+    "split_score": 0.9836
+  },
+  {
+    "title": "ランス・アンド・マスクス",
+    "anime_id": 24011,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Fantasy"
+    ],
+    "completion_rate": 0.5873,
+    "split_score": 0.9779
+  },
+  {
+    "title": "モモキュンソード",
+    "anime_id": 22225,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Comedy",
+      "Ecchi",
+      "Fantasy"
+    ],
+    "completion_rate": 0.5885,
+    "split_score": 0.9773
+  },
+  {
+    "title": "ボボボーボ・ボーボボ",
+    "anime_id": 1050,
+    "year": 2003,
+    "episodes": 76,
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Comedy",
+      "Shounen"
+    ],
+    "completion_rate": 0.5904,
+    "split_score": 0.9763
+  },
+  {
+    "title": "エンドライド",
+    "anime_id": 32608,
+    "year": 2016,
+    "episodes": 24,
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "completion_rate": 0.4072,
+    "split_score": 0.975
+  },
+  {
+    "title": "ケロロ軍曹",
+    "anime_id": 516,
+    "year": 2004,
+    "episodes": 358,
+    "genres": [
+      "Comedy",
+      "Mecha",
+      "Parody",
+      "Sci-Fi",
+      "Shounen"
+    ],
+    "completion_rate": 0.4061,
+    "split_score": 0.9744
+  },
+  {
+    "title": "ピングー in ザ・シティ",
+    "anime_id": 36259,
+    "year": 2017,
+    "episodes": 26,
+    "genres": [
+      "Comedy",
+      "Kids",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.5941,
+    "split_score": 0.9743
+  },
+  {
+    "title": "ガールフレンド(仮)",
+    "anime_id": 24855,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "School",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.596,
+    "split_score": 0.9732
+  },
+  {
+    "title": "あひるの空",
+    "anime_id": 37403,
+    "year": 2019,
+    "episodes": 50,
+    "genres": [
+      "Comedy",
+      "Sports",
+      "Drama",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.5965,
+    "split_score": 0.973
+  },
+  {
+    "title": "メルヘン・メドヘン",
+    "anime_id": 35997,
+    "year": 2018,
+    "episodes": 10,
+    "genres": [
+      "Fantasy",
+      "Magic",
+      "School"
+    ],
+    "completion_rate": 0.5974,
+    "split_score": 0.9725
+  },
+  {
+    "title": "VAMPIRE HOLMES",
+    "anime_id": 28929,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Mystery",
+      "Comedy",
+      "Supernatural"
+    ],
+    "completion_rate": 0.6062,
+    "split_score": 0.9672
+  },
+  {
+    "title": "実験品家族 -クリーチャーズ・ファミリー・デイズ-",
+    "anime_id": 36397,
+    "year": 2018,
+    "episodes": 12,
+    "genres": [
+      "Sci-Fi",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.6069,
+    "split_score": 0.9668
+  },
+  {
+    "title": "ブギーポップは笑わない",
+    "anime_id": 37451,
+    "year": 2019,
+    "episodes": 18,
+    "genres": [
+      "Psychological",
+      "Mystery",
+      "Horror"
+    ],
+    "completion_rate": 0.607,
+    "split_score": 0.9667
+  },
+  {
+    "title": "初恋モンスター",
+    "anime_id": 31109,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Comedy",
+      "Romance",
+      "School",
+      "Shoujo"
+    ],
+    "completion_rate": 0.6084,
+    "split_score": 0.9658
+  },
+  {
+    "title": "sin 七つの大罪",
+    "anime_id": 33834,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Ecchi",
+      "Fantasy"
+    ],
+    "completion_rate": 0.6165,
+    "split_score": 0.9604
+  },
+  {
+    "title": "宇宙兄弟",
+    "anime_id": 12431,
+    "year": 2012,
+    "episodes": 99,
+    "genres": [
+      "Comedy",
+      "Sci-Fi",
+      "Seinen",
+      "Slice of Life",
+      "Space"
+    ],
+    "completion_rate": 0.618,
+    "split_score": 0.9595
+  },
+  {
+    "title": "将国のアルタイル",
+    "anime_id": 34547,
+    "year": 2017,
+    "episodes": 24,
+    "genres": [
+      "Military",
+      "Adventure",
+      "Historical",
+      "Drama",
+      "Fantasy",
+      "Shounen"
+    ],
+    "completion_rate": 0.6181,
+    "split_score": 0.9594
+  },
+  {
+    "title": "境界のRINNE",
+    "anime_id": 28423,
+    "year": 2015,
+    "episodes": 25,
+    "genres": [
+      "Comedy",
+      "Supernatural",
+      "Romance",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.6191,
+    "split_score": 0.9587
+  },
+  {
+    "title": "金色のガッシュベル!!",
+    "anime_id": 250,
+    "year": 2003,
+    "episodes": 150,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Demons",
+      "Supernatural",
+      "Magic",
+      "Shounen"
+    ],
+    "completion_rate": 0.6196,
+    "split_score": 0.9583
+  },
+  {
+    "title": "時間の支配者",
+    "anime_id": 34565,
+    "year": 2017,
+    "episodes": 13,
+    "genres": [
+      "Supernatural",
+      "Shounen"
+    ],
+    "completion_rate": 0.6214,
+    "split_score": 0.957
+  },
+  {
+    "title": "聖戦ケルベロス　竜刻のファタリテ",
+    "anime_id": 32595,
+    "year": 2016,
+    "episodes": 13,
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "completion_rate": 0.6239,
+    "split_score": 0.9552
+  },
+  {
+    "title": "とっとこハム太郎",
+    "anime_id": 508,
+    "year": 2000,
+    "episodes": 296,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Kids"
+    ],
+    "completion_rate": 0.625,
+    "split_score": 0.9544
+  },
+  {
+    "title": "グランベルム",
+    "anime_id": 39417,
+    "year": 2019,
+    "episodes": 13,
+    "genres": [
+      "Fantasy",
+      "Magic",
+      "Mecha"
+    ],
+    "completion_rate": 0.6261,
+    "split_score": 0.9536
+  },
+  {
+    "title": "魔法少女 俺",
+    "anime_id": 36902,
+    "year": 2018,
+    "episodes": 12,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Magic"
+    ],
+    "completion_rate": 0.6271,
+    "split_score": 0.9528
+  },
+  {
+    "title": "この世の果てで恋を唄う少女YU-NO",
+    "anime_id": 34620,
+    "year": 2019,
+    "episodes": 26,
+    "genres": [
+      "Sci-Fi",
+      "Drama"
+    ],
+    "completion_rate": 0.6296,
+    "split_score": 0.951
+  },
+  {
+    "title": "バチカン奇跡調査官",
+    "anime_id": 34368,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Mystery",
+      "Supernatural",
+      "Drama"
+    ],
+    "completion_rate": 0.631,
+    "split_score": 0.9499
+  },
+  {
+    "title": "リオ レインボーゲート!",
+    "anime_id": 8241,
+    "year": 2011,
+    "episodes": 13,
+    "genres": [
+      "Game",
+      "Comedy",
+      "Ecchi"
+    ],
+    "completion_rate": 0.6314,
+    "split_score": 0.9496
+  },
+  {
+    "title": "スケットダンス",
+    "anime_id": 9863,
+    "year": 2011,
+    "episodes": 77,
+    "genres": [
+      "Comedy",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.6316,
+    "split_score": 0.9494
+  },
+  {
+    "title": "サクラクエスト",
+    "anime_id": 34494,
+    "year": 2017,
+    "episodes": 25,
+    "genres": [
+      "Slice of Life",
+      "Comedy"
+    ],
+    "completion_rate": 0.6341,
+    "split_score": 0.9474
+  },
+  {
+    "title": "ミラクル☆トレイン〜大江戸線へようこそ〜",
+    "anime_id": 7103,
+    "year": 2009,
+    "episodes": 13,
+    "genres": [
+      "Fantasy",
+      "Shoujo"
+    ],
+    "completion_rate": 0.6348,
+    "split_score": 0.9469
+  },
+  {
+    "title": "電波教師",
+    "anime_id": 29589,
+    "year": 2015,
+    "episodes": 24,
+    "genres": [
+      "Comedy",
+      "Romance",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.6366,
+    "split_score": 0.9454
+  },
+  {
+    "title": "そにアニ -SUPER SONICO THE ANIMATION-",
+    "anime_id": 20555,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Music",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.6367,
+    "split_score": 0.9454
+  },
+  {
+    "title": "Code:Realize ～創世の姫君～",
+    "anime_id": 31456,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Military",
+      "Harem",
+      "Historical",
+      "Romance",
+      "Fantasy",
+      "Josei"
+    ],
+    "completion_rate": 0.639,
+    "split_score": 0.9436
+  },
+  {
+    "title": "18if",
+    "anime_id": 35248,
+    "year": 2017,
+    "episodes": 13,
+    "genres": [
+      "Mystery",
+      "Supernatural"
+    ],
+    "completion_rate": 0.6394,
+    "split_score": 0.9432
+  },
+  {
+    "title": "ハルチカ ～ハルタとチカは青春する～",
+    "anime_id": 30895,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Music",
+      "Slice of Life",
+      "Mystery",
+      "Romance",
+      "School"
+    ],
+    "completion_rate": 0.6425,
+    "split_score": 0.9406
+  },
+  {
+    "title": "モーレツ宇宙海賊",
+    "anime_id": 8917,
+    "year": 2012,
+    "episodes": 26,
+    "genres": [
+      "Sci-Fi",
+      "Space"
+    ],
+    "completion_rate": 0.6427,
+    "split_score": 0.9404
+  },
+  {
+    "title": "今日からマ王！",
+    "anime_id": 251,
+    "year": 2004,
+    "episodes": 78,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Demons",
+      "Fantasy",
+      "Shoujo"
+    ],
+    "completion_rate": 0.6475,
+    "split_score": 0.9362
+  },
+  {
+    "title": "うみものがたり　～あなたがいてくれたコト～",
+    "anime_id": 6129,
+    "year": 2009,
+    "episodes": 12,
+    "genres": [
+      "Supernatural",
+      "Drama",
+      "Magic",
+      "Romance",
+      "Fantasy"
+    ],
+    "completion_rate": 0.6504,
+    "split_score": 0.9337
+  },
+  {
+    "title": "アンジュ・ヴィエルジュ",
+    "anime_id": 32171,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Adventure",
+      "Magic",
+      "Fantasy",
+      "School"
+    ],
+    "completion_rate": 0.6538,
+    "split_score": 0.9306
+  },
+  {
+    "title": "エガオノダイカ",
+    "anime_id": 38544,
+    "year": 2019,
+    "episodes": 12,
+    "genres": [
+      "Military",
+      "Slice of Life",
+      "Drama",
+      "Fantasy",
+      "Mecha"
+    ],
+    "completion_rate": 0.6541,
+    "split_score": 0.9303
+  },
+  {
+    "title": "DIVE!!",
+    "anime_id": 34543,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Comedy",
+      "Sports"
+    ],
+    "completion_rate": 0.6542,
+    "split_score": 0.9302
+  },
+  {
+    "title": "こどものおもちゃ",
+    "anime_id": 1486,
+    "year": 1996,
+    "episodes": 102,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance",
+      "Shoujo"
+    ],
+    "completion_rate": 0.6548,
+    "split_score": 0.9297
+  },
+  {
+    "title": "帰宅部活動記録",
+    "anime_id": 18495,
+    "year": 2013,
+    "episodes": 12,
+    "genres": [
+      "Comedy",
+      "School",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.6584,
+    "split_score": 0.9263
+  },
+  {
+    "title": "ISLAND",
+    "anime_id": 33012,
+    "year": 2018,
+    "episodes": 12,
+    "genres": [
+      "Drama",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.6588,
+    "split_score": 0.926
+  },
+  {
+    "title": "チーズスイートホーム",
+    "anime_id": 3841,
+    "year": 2008,
+    "episodes": 104,
+    "genres": [
+      "Comedy",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.6604,
+    "split_score": 0.9244
+  },
+  {
+    "title": "生徒会役員共＊ OAD",
+    "anime_id": 26123,
+    "year": 2014,
+    "episodes": 10,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.3393,
+    "split_score": 0.9242
+  },
+  {
+    "title": "ドラえもん",
+    "anime_id": 2471,
+    "year": 1979,
+    "episodes": 1787,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Kids",
+      "Sci-Fi",
+      "Shounen"
+    ],
+    "completion_rate": 0.6609,
+    "split_score": 0.9239
+  },
+  {
+    "title": "ファンタジスタドール",
+    "anime_id": 15883,
+    "year": 2013,
+    "episodes": 12,
+    "genres": [
+      "Sci-Fi",
+      "Magic",
+      "Fantasy"
+    ],
+    "completion_rate": 0.6617,
+    "split_score": 0.9231
+  },
+  {
+    "title": "宇宙をかける少女",
+    "anime_id": 5307,
+    "year": 2009,
+    "episodes": 26,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Sci-Fi",
+      "Space"
+    ],
+    "completion_rate": 0.6661,
+    "split_score": 0.9189
+  },
+  {
+    "title": "銀河英雄伝説",
+    "anime_id": 820,
+    "year": 1988,
+    "episodes": 110,
+    "genres": [
+      "Military",
+      "Sci-Fi",
+      "Space",
+      "Drama"
+    ],
+    "completion_rate": 0.6672,
+    "split_score": 0.9177
+  },
+  {
+    "title": "通常攻撃が全体攻撃で二回攻撃のお母さんは好きですか？",
+    "anime_id": 38573,
+    "year": 2019,
+    "episodes": 12,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "completion_rate": 0.6675,
+    "split_score": 0.9174
+  },
+  {
+    "title": "戦×恋（ヴァルラヴ）",
+    "anime_id": 39799,
+    "year": 2019,
+    "episodes": 12,
+    "genres": [
+      "Harem",
+      "Comedy",
+      "Supernatural",
+      "Romance",
+      "Ecchi",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.6688,
+    "split_score": 0.9161
+  },
+  {
+    "title": "らんま1/2",
+    "anime_id": 210,
+    "year": 1989,
+    "episodes": 161,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Martial Arts",
+      "Fantasy",
+      "Shounen"
+    ],
+    "completion_rate": 0.6689,
+    "split_score": 0.916
+  },
+  {
+    "title": "僧侶と交わる色欲の夜に…",
+    "anime_id": 34823,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Drama",
+      "Ecchi",
+      "Romance"
+    ],
+    "completion_rate": 0.6703,
+    "split_score": 0.9146
+  },
+  {
+    "title": "健全ロボ ダイミダラー",
+    "anime_id": 21809,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Ecchi",
+      "Comedy",
+      "Mecha",
+      "Seinen"
+    ],
+    "completion_rate": 0.6704,
+    "split_score": 0.9145
+  },
+  {
+    "title": "愛・天地無用!",
+    "anime_id": 24699,
+    "year": 2014,
+    "episodes": 50,
+    "genres": [
+      "Comedy",
+      "Sci-Fi",
+      "Shounen"
+    ],
+    "completion_rate": 0.6739,
+    "split_score": 0.9108
+  },
+  {
+    "title": "バッテリー",
+    "anime_id": 32947,
+    "year": 2016,
+    "episodes": 11,
+    "genres": [
+      "Slice of Life",
+      "Sports",
+      "Drama"
+    ],
+    "completion_rate": 0.6748,
+    "split_score": 0.9099
+  },
+  {
+    "title": "FAIRY TAIL（フェアリーテイル）",
+    "anime_id": 6702,
+    "year": 2009,
+    "episodes": 175,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Magic",
+      "Fantasy",
+      "Shounen"
+    ],
+    "completion_rate": 0.6749,
+    "split_score": 0.9099
+  },
+  {
+    "title": "シュヴァリエ Le Chevalier D'Eon",
+    "anime_id": 1013,
+    "year": 2006,
+    "episodes": 24,
+    "genres": [
+      "Historical",
+      "Magic",
+      "Mystery",
+      "Seinen",
+      "Supernatural"
+    ],
+    "completion_rate": 0.6753,
+    "split_score": 0.9094
+  },
+  {
+    "title": "池袋ウエストゲートパーク",
+    "anime_id": 40359,
+    "year": 2020,
+    "episodes": 12,
+    "genres": [
+      "Mystery",
+      "Drama"
+    ],
+    "completion_rate": 0.6758,
+    "split_score": 0.9089
+  },
+  {
+    "title": "妖怪アパートの幽雅な日常",
+    "anime_id": 35220,
+    "year": 2017,
+    "episodes": 26,
+    "genres": [
+      "Slice of Life",
+      "Mystery",
+      "Supernatural"
+    ],
+    "completion_rate": 0.677,
+    "split_score": 0.9077
+  },
+  {
+    "title": "ギルガメッシュ",
+    "anime_id": 385,
+    "year": 2003,
+    "episodes": 26,
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Sci-Fi",
+      "Supernatural"
+    ],
+    "completion_rate": 0.6777,
+    "split_score": 0.9069
+  },
+  {
+    "title": "俺が好きなのは妹だけど妹じゃない",
+    "anime_id": 36632,
+    "year": 2018,
+    "episodes": 10,
+    "genres": [
+      "Comedy",
+      "Ecchi",
+      "Romance"
+    ],
+    "completion_rate": 0.6786,
+    "split_score": 0.9059
+  },
+  {
+    "title": "人生相談テレビアニメーション「人生」",
+    "anime_id": 23121,
+    "year": 2014,
+    "episodes": 13,
+    "genres": [
+      "Comedy",
+      "School",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.6805,
+    "split_score": 0.9039
+  },
+  {
+    "title": "ぱにぽにだっしゅ！",
+    "anime_id": 490,
+    "year": 2005,
+    "episodes": 26,
+    "genres": [
+      "Comedy",
+      "Parody",
+      "School"
+    ],
+    "completion_rate": 0.6813,
+    "split_score": 0.903
+  },
+  {
+    "title": "NIGHT HEAD GENESIS (ナイト ヘッド ジェネシス)",
+    "anime_id": 1243,
+    "year": 2006,
+    "episodes": 24,
+    "genres": [
+      "Sci-Fi",
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Drama"
+    ],
+    "completion_rate": 0.6818,
+    "split_score": 0.9024
+  },
+  {
+    "title": "バスカッシュ！",
+    "anime_id": 5675,
+    "year": 2009,
+    "episodes": 26,
+    "genres": [
+      "Sports",
+      "Mecha",
+      "Shounen"
+    ],
+    "completion_rate": 0.683,
+    "split_score": 0.9011
+  },
+  {
+    "title": "美男高校地球防衛部LOVE!",
+    "anime_id": 27727,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Parody",
+      "Magic",
+      "School"
+    ],
+    "completion_rate": 0.6831,
+    "split_score": 0.901
+  },
+  {
+    "title": "NORN9 ノルン+ノネット",
+    "anime_id": 31452,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Romance",
+      "Fantasy",
+      "Josei"
+    ],
+    "completion_rate": 0.6832,
+    "split_score": 0.9009
+  },
+  {
+    "title": "ささみさん@がんばらない",
+    "anime_id": 14515,
+    "year": 2013,
+    "episodes": 12,
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Supernatural"
+    ],
+    "completion_rate": 0.6834,
+    "split_score": 0.9007
+  },
+  {
+    "title": "花咲ける青少年",
+    "anime_id": 5835,
+    "year": 2009,
+    "episodes": 39,
+    "genres": [
+      "Drama",
+      "Romance",
+      "Shoujo"
+    ],
+    "completion_rate": 0.6851,
+    "split_score": 0.8987
+  },
+  {
+    "title": "厨病激発ボーイ",
+    "anime_id": 38390,
+    "year": 2019,
+    "episodes": 11,
+    "genres": [
+      "Comedy",
+      "School"
+    ],
+    "completion_rate": 0.6853,
+    "split_score": 0.8985
+  },
+  {
+    "title": "魍魎の匣",
+    "anime_id": 4879,
+    "year": 2008,
+    "episodes": 13,
+    "genres": [
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Thriller",
+      "Seinen"
+    ],
+    "completion_rate": 0.6862,
+    "split_score": 0.8975
+  },
+  {
+    "title": "装神少女まとい",
+    "anime_id": 33668,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Supernatural",
+      "Magic"
+    ],
+    "completion_rate": 0.6862,
+    "split_score": 0.8975
+  },
+  {
+    "title": "ポヨポヨ観察日記",
+    "anime_id": 12021,
+    "year": 2012,
+    "episodes": 52,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Seinen"
+    ],
+    "completion_rate": 0.6881,
+    "split_score": 0.8954
+  },
+  {
+    "title": "レッド ガーデン",
+    "anime_id": 1601,
+    "year": 2006,
+    "episodes": 22,
+    "genres": [
+      "Drama",
+      "Mystery"
+    ],
+    "completion_rate": 0.6904,
+    "split_score": 0.8927
+  },
+  {
+    "title": "サンリオ男子",
+    "anime_id": 34839,
+    "year": 2018,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Drama",
+      "School"
+    ],
+    "completion_rate": 0.6916,
+    "split_score": 0.8913
+  },
+  {
+    "title": "奴隷区 The Animation",
+    "anime_id": 36525,
+    "year": 2018,
+    "episodes": 12,
+    "genres": [
+      "Drama",
+      "Psychological"
+    ],
+    "completion_rate": 0.6921,
+    "split_score": 0.8907
+  },
+  {
+    "title": "グイン・サーガ",
+    "anime_id": 5041,
+    "year": 2009,
+    "episodes": 26,
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "completion_rate": 0.6926,
+    "split_score": 0.8902
+  },
+  {
+    "title": "狂乱家族日記",
+    "anime_id": 3577,
+    "year": 2008,
+    "episodes": 26,
+    "genres": [
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.6931,
+    "split_score": 0.8895
+  },
+  {
+    "title": "超訳百人一首 うた恋い。",
+    "anime_id": 13349,
+    "year": 2012,
+    "episodes": 13,
+    "genres": [
+      "Comedy",
+      "Historical",
+      "Romance",
+      "Josei"
+    ],
+    "completion_rate": 0.6946,
+    "split_score": 0.8877
+  },
+  {
+    "title": "クロックワーク・プラネット",
+    "anime_id": 32407,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.6947,
+    "split_score": 0.8877
+  },
+  {
+    "title": "おそ松さん",
+    "anime_id": 31174,
+    "year": 2015,
+    "episodes": 25,
+    "genres": [
+      "Comedy",
+      "Parody"
+    ],
+    "completion_rate": 0.6948,
+    "split_score": 0.8876
+  },
+  {
+    "title": "オールアウト!!",
+    "anime_id": 31588,
+    "year": 2016,
+    "episodes": 25,
+    "genres": [
+      "School",
+      "Seinen",
+      "Sports"
+    ],
+    "completion_rate": 0.6986,
+    "split_score": 0.8829
+  },
+  {
+    "title": "EVIL OR LIVE",
+    "anime_id": 36245,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Psychological",
+      "School"
+    ],
+    "completion_rate": 0.699,
+    "split_score": 0.8825
+  },
+  {
+    "title": "タイタニア",
+    "anime_id": 4066,
+    "year": 2008,
+    "episodes": 26,
+    "genres": [
+      "Adventure",
+      "Military",
+      "Psychological",
+      "Romance",
+      "Sci-Fi",
+      "Space"
+    ],
+    "completion_rate": 0.6991,
+    "split_score": 0.8824
+  },
+  {
+    "title": "ブルー・ドラゴン",
+    "anime_id": 2142,
+    "year": 2007,
+    "episodes": 51,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Supernatural"
+    ],
+    "completion_rate": 0.7012,
+    "split_score": 0.8798
+  },
+  {
+    "title": "幸腹グラフィティ",
+    "anime_id": 24629,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Seinen"
+    ],
+    "completion_rate": 0.7057,
+    "split_score": 0.8742
+  },
+  {
+    "title": "コンビニカレシ",
+    "anime_id": 35434,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Romance"
+    ],
+    "completion_rate": 0.7062,
+    "split_score": 0.8736
+  },
+  {
+    "title": "恋する小惑星〈アストロイド〉",
+    "anime_id": 39388,
+    "year": 2020,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "School"
+    ],
+    "completion_rate": 0.707,
+    "split_score": 0.8725
+  },
+  {
+    "title": "猫神やおよろず",
+    "anime_id": 9934,
+    "year": 2011,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Supernatural",
+      "Seinen"
+    ],
+    "completion_rate": 0.7078,
+    "split_score": 0.8715
+  },
+  {
+    "title": "放課後のプレアデス",
+    "anime_id": 17919,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Magic",
+      "Space"
+    ],
+    "completion_rate": 0.7083,
+    "split_score": 0.8709
+  },
+  {
+    "title": "祝福のカンパネラ",
+    "anime_id": 6979,
+    "year": 2010,
+    "episodes": 12,
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Harem",
+      "Magic"
+    ],
+    "completion_rate": 0.7106,
+    "split_score": 0.8679
+  },
+  {
+    "title": "エスカ&ロジーのアトリエ ～黄昏の空の錬金術士～",
+    "anime_id": 21167,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Fantasy"
+    ],
+    "completion_rate": 0.7109,
+    "split_score": 0.8675
+  },
+  {
+    "title": "レイヴ",
+    "anime_id": 246,
+    "year": 2001,
+    "episodes": 51,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Romance",
+      "Shounen"
+    ],
+    "completion_rate": 0.7115,
+    "split_score": 0.8668
+  },
+  {
+    "title": "王様ゲーム The Animation",
+    "anime_id": 36027,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Mystery",
+      "Dementia",
+      "Horror",
+      "Supernatural",
+      "Drama",
+      "School"
+    ],
+    "completion_rate": 0.7125,
+    "split_score": 0.8655
+  },
+  {
+    "title": "ユリ熊嵐",
+    "anime_id": 26165,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Psychological",
+      "Drama",
+      "Fantasy",
+      "School",
+      "Seinen",
+      "Shoujo Ai"
+    ],
+    "completion_rate": 0.7141,
+    "split_score": 0.8634
+  },
+  {
+    "title": "クラスルーム☆クライシス",
+    "anime_id": 30383,
+    "year": 2015,
+    "episodes": 13,
+    "genres": [
+      "Drama",
+      "Romance",
+      "School",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.7142,
+    "split_score": 0.8633
+  },
+  {
+    "title": "失われた未来を求めて",
+    "anime_id": 21845,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Sci-Fi",
+      "Drama",
+      "Romance",
+      "School"
+    ],
+    "completion_rate": 0.7148,
+    "split_score": 0.8624
+  },
+  {
+    "title": "めぞん一刻",
+    "anime_id": 1453,
+    "year": 1986,
+    "episodes": 96,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Drama",
+      "Romance",
+      "Seinen"
+    ],
+    "completion_rate": 0.716,
+    "split_score": 0.8608
+  },
+  {
+    "title": "こわぼん",
+    "anime_id": 30948,
+    "year": 2015,
+    "episodes": 13,
+    "genres": [
+      "Horror"
+    ],
+    "completion_rate": 0.7167,
+    "split_score": 0.86
+  },
+  {
+    "title": "エル・カザド",
+    "anime_id": 2030,
+    "year": 2007,
+    "episodes": 26,
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Mystery"
+    ],
+    "completion_rate": 0.7175,
+    "split_score": 0.8589
+  },
+  {
+    "title": "<Infinite Dendrogram>-インフィニット・デンドログラム-",
+    "anime_id": 38909,
+    "year": 2020,
+    "episodes": 13,
+    "genres": [
+      "Game",
+      "Fantasy"
+    ],
+    "completion_rate": 0.7179,
+    "split_score": 0.8583
+  },
+  {
+    "title": "DAYS",
+    "anime_id": 32494,
+    "year": 2016,
+    "episodes": 24,
+    "genres": [
+      "Sports",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.7181,
+    "split_score": 0.858
+  },
+  {
+    "title": "乱歩奇譚 Game of Laplace",
+    "anime_id": 28619,
+    "year": 2015,
+    "episodes": 11,
+    "genres": [
+      "Mystery"
+    ],
+    "completion_rate": 0.7188,
+    "split_score": 0.857
+  },
+  {
+    "title": "B-PROJECT～鼓動＊アンビシャス～",
+    "anime_id": 33046,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Music",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7198,
+    "split_score": 0.8557
+  },
+  {
+    "title": "天体のメソッド",
+    "anime_id": 23209,
+    "year": 2014,
+    "episodes": 13,
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "School",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.72,
+    "split_score": 0.8554
+  },
+  {
+    "title": "少女たちは荒野を目指す",
+    "anime_id": 31914,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "School"
+    ],
+    "completion_rate": 0.7206,
+    "split_score": 0.8546
+  },
+  {
+    "title": "惡の華",
+    "anime_id": 16201,
+    "year": 2013,
+    "episodes": 13,
+    "genres": [
+      "Psychological",
+      "Drama",
+      "Romance",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.7209,
+    "split_score": 0.8543
+  },
+  {
+    "title": "絶対防衛レヴィアタン",
+    "anime_id": 17681,
+    "year": 2013,
+    "episodes": 13,
+    "genres": [
+      "Fantasy",
+      "Magic",
+      "Comedy"
+    ],
+    "completion_rate": 0.7218,
+    "split_score": 0.8529
+  },
+  {
+    "title": "The SoulTaker～魂狩～",
+    "anime_id": 1048,
+    "year": 2001,
+    "episodes": 13,
+    "genres": [
+      "Demons",
+      "Horror",
+      "Supernatural"
+    ],
+    "completion_rate": 0.7223,
+    "split_score": 0.8523
+  },
+  {
+    "title": "幻影ヲ駆ケル太陽",
+    "anime_id": 17651,
+    "year": 2013,
+    "episodes": 13,
+    "genres": [
+      "Magic"
+    ],
+    "completion_rate": 0.7223,
+    "split_score": 0.8523
+  },
+  {
+    "title": "セイレン",
+    "anime_id": 33836,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Romance",
+      "School"
+    ],
+    "completion_rate": 0.7241,
+    "split_score": 0.8499
+  },
+  {
+    "title": "ろんぐらいだぁす！",
+    "anime_id": 30652,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Sports",
+      "Shounen"
+    ],
+    "completion_rate": 0.7242,
+    "split_score": 0.8497
+  },
+  {
+    "title": "金色のコルダ Blue♪Sky",
+    "anime_id": 20971,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Harem",
+      "Music",
+      "School",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7263,
+    "split_score": 0.8468
+  },
+  {
+    "title": "ハクメイとミコチ",
+    "anime_id": 36094,
+    "year": 2018,
+    "episodes": 12,
+    "genres": [
+      "Fantasy",
+      "Seinen",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.7267,
+    "split_score": 0.8462
+  },
+  {
+    "title": "くまみこ",
+    "anime_id": 31804,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Seinen"
+    ],
+    "completion_rate": 0.7267,
+    "split_score": 0.8461
+  },
+  {
+    "title": "チア男子!!",
+    "anime_id": 32483,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Sports",
+      "Drama",
+      "School"
+    ],
+    "completion_rate": 0.7271,
+    "split_score": 0.8456
+  },
+  {
+    "title": "アリスと蔵六",
+    "anime_id": 34350,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Adventure",
+      "Mystery",
+      "Seinen"
+    ],
+    "completion_rate": 0.7277,
+    "split_score": 0.8448
+  },
+  {
+    "title": "放課後さいころ倶楽部",
+    "anime_id": 38276,
+    "year": 2019,
+    "episodes": 12,
+    "genres": [
+      "Game",
+      "Comedy",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.7283,
+    "split_score": 0.8438
+  },
+  {
+    "title": "グラスリップ",
+    "anime_id": 23079,
+    "year": 2014,
+    "episodes": 13,
+    "genres": [
+      "Romance",
+      "Slice of Life",
+      "Supernatural"
+    ],
+    "completion_rate": 0.7289,
+    "split_score": 0.843
+  },
+  {
+    "title": "ヤング ブラック・ジャック",
+    "anime_id": 30740,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Historical",
+      "Drama",
+      "Seinen"
+    ],
+    "completion_rate": 0.7297,
+    "split_score": 0.8419
+  },
+  {
+    "title": "シムーン",
+    "anime_id": 879,
+    "year": 2006,
+    "episodes": 26,
+    "genres": [
+      "Military",
+      "Drama",
+      "Magic",
+      "Romance",
+      "Fantasy",
+      "Shoujo Ai"
+    ],
+    "completion_rate": 0.7302,
+    "split_score": 0.8412
+  },
+  {
+    "title": "ネコぱら",
+    "anime_id": 38924,
+    "year": 2020,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy"
+    ],
+    "completion_rate": 0.7313,
+    "split_score": 0.8396
+  },
+  {
+    "title": "うらら迷路帖",
+    "anime_id": 32924,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Fantasy",
+      "Seinen"
+    ],
+    "completion_rate": 0.7323,
+    "split_score": 0.8382
+  },
+  {
+    "title": "バーテンダー",
+    "anime_id": 1589,
+    "year": 2006,
+    "episodes": 11,
+    "genres": [
+      "Drama",
+      "Seinen",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.7323,
+    "split_score": 0.8382
+  },
+  {
+    "title": "伊藤潤二「コレクション」",
+    "anime_id": 36124,
+    "year": 2018,
+    "episodes": 12,
+    "genres": [
+      "Mystery",
+      "Comedy",
+      "Horror",
+      "Demons",
+      "Psychological",
+      "Supernatural",
+      "Drama",
+      "Thriller",
+      "School"
+    ],
+    "completion_rate": 0.7323,
+    "split_score": 0.8381
+  },
+  {
+    "title": "モンスター",
+    "anime_id": 19,
+    "year": 2004,
+    "episodes": 74,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Police",
+      "Psychological",
+      "Seinen",
+      "Thriller"
+    ],
+    "completion_rate": 0.733,
+    "split_score": 0.8371
+  },
+  {
+    "title": "獣の奏者エリン",
+    "anime_id": 5420,
+    "year": 2009,
+    "episodes": 50,
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.7337,
+    "split_score": 0.8361
+  },
+  {
+    "title": "レンタルマギカ",
+    "anime_id": 2369,
+    "year": 2007,
+    "episodes": 24,
+    "genres": [
+      "Mystery",
+      "Supernatural",
+      "Fantasy"
+    ],
+    "completion_rate": 0.7355,
+    "split_score": 0.8334
+  },
+  {
+    "title": "殺戮の天使",
+    "anime_id": 35994,
+    "year": 2018,
+    "episodes": 16,
+    "genres": [
+      "Adventure",
+      "Horror",
+      "Psychological",
+      "Thriller"
+    ],
+    "completion_rate": 0.7356,
+    "split_score": 0.8333
+  },
+  {
+    "title": "マギアレコード 魔法少女まどか☆マギカ外伝 (TV)",
+    "anime_id": 38256,
+    "year": 2020,
+    "episodes": 13,
+    "genres": [
+      "Psychological",
+      "Drama",
+      "Magic",
+      "Thriller"
+    ],
+    "completion_rate": 0.7361,
+    "split_score": 0.8326
+  },
+  {
+    "title": "真夜中のオカルト公務員",
+    "anime_id": 37964,
+    "year": 2019,
+    "episodes": 12,
+    "genres": [
+      "Demons",
+      "Fantasy",
+      "Mystery",
+      "Shoujo",
+      "Supernatural"
+    ],
+    "completion_rate": 0.7368,
+    "split_score": 0.8315
+  },
+  {
+    "title": "Occultic;Nine －オカルティック・ナイン－",
+    "anime_id": 32962,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Sci-Fi",
+      "Mystery"
+    ],
+    "completion_rate": 0.7373,
+    "split_score": 0.8307
+  },
+  {
+    "title": "ピーター・グリルと賢者の時間",
+    "anime_id": 40436,
+    "year": 2020,
+    "episodes": 12,
+    "genres": [
+      "Harem",
+      "Comedy",
+      "Ecchi",
+      "Fantasy"
+    ],
+    "completion_rate": 0.7374,
+    "split_score": 0.8306
+  },
+  {
+    "title": "かくりよの宿飯",
+    "anime_id": 36754,
+    "year": 2018,
+    "episodes": 26,
+    "genres": [
+      "Demons",
+      "Drama",
+      "Romance",
+      "Supernatural"
+    ],
+    "completion_rate": 0.7374,
+    "split_score": 0.8306
+  },
+  {
+    "title": "鬼平",
+    "anime_id": 33983,
+    "year": 2017,
+    "episodes": 13,
+    "genres": [
+      "Historical",
+      "Seinen"
+    ],
+    "completion_rate": 0.7383,
+    "split_score": 0.8294
+  },
+  {
+    "title": "我が家のお稲荷さま。",
+    "anime_id": 3322,
+    "year": 2008,
+    "episodes": 24,
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Shounen",
+      "Supernatural"
+    ],
+    "completion_rate": 0.7386,
+    "split_score": 0.8288
+  },
+  {
+    "title": "京都寺町三条のホームズ",
+    "anime_id": 37458,
+    "year": 2018,
+    "episodes": 12,
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Romance",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.7387,
+    "split_score": 0.8287
+  },
+  {
+    "title": "はるかなレシーブ",
+    "anime_id": 35983,
+    "year": 2018,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Sports"
+    ],
+    "completion_rate": 0.7387,
+    "split_score": 0.8286
+  },
+  {
+    "title": "ジョーカー・ゲーム",
+    "anime_id": 31405,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Military",
+      "Historical",
+      "Drama"
+    ],
+    "completion_rate": 0.7414,
+    "split_score": 0.8246
+  },
+  {
+    "title": "石膏ボーイズ",
+    "anime_id": 31540,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Music",
+      "Comedy"
+    ],
+    "completion_rate": 0.7418,
+    "split_score": 0.824
+  },
+  {
+    "title": "タクティクス",
+    "anime_id": 173,
+    "year": 2004,
+    "episodes": 25,
+    "genres": [
+      "Mystery",
+      "Comedy",
+      "Historical",
+      "Demons",
+      "Supernatural",
+      "Drama",
+      "Shounen"
+    ],
+    "completion_rate": 0.742,
+    "split_score": 0.8237
+  },
+  {
+    "title": "12歳。～ちっちゃなムネのトキメキ～",
+    "anime_id": 32601,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Romance",
+      "School",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7423,
+    "split_score": 0.8233
+  },
+  {
+    "title": "牙-KIBA-",
+    "anime_id": 845,
+    "year": 2006,
+    "episodes": 51,
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Shounen"
+    ],
+    "completion_rate": 0.7434,
+    "split_score": 0.8216
+  },
+  {
+    "title": "カードキャプターさくら クリアカード編",
+    "anime_id": 33354,
+    "year": 2018,
+    "episodes": 22,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Magic",
+      "Romance",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7435,
+    "split_score": 0.8214
+  },
+  {
+    "title": "裏切りは僕の名前を知っている",
+    "anime_id": 7058,
+    "year": 2010,
+    "episodes": 24,
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Shoujo",
+      "Shounen Ai"
+    ],
+    "completion_rate": 0.7442,
+    "split_score": 0.8204
+  },
+  {
+    "title": "たまゆら～hitotose～",
+    "anime_id": 10232,
+    "year": 2011,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Drama"
+    ],
+    "completion_rate": 0.7463,
+    "split_score": 0.8171
+  },
+  {
+    "title": "ひまわりっ!",
+    "anime_id": 910,
+    "year": 2006,
+    "episodes": 13,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Martial Arts"
+    ],
+    "completion_rate": 0.7464,
+    "split_score": 0.817
+  },
+  {
+    "title": "プリンス・オブ・ストライド　オルタナティブ",
+    "anime_id": 31559,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Sports",
+      "Drama",
+      "School"
+    ],
+    "completion_rate": 0.7479,
+    "split_score": 0.8145
+  },
+  {
+    "title": "アイドルマスター",
+    "anime_id": 10278,
+    "year": 2011,
+    "episodes": 25,
+    "genres": [
+      "Music",
+      "Comedy",
+      "Drama"
+    ],
+    "completion_rate": 0.7492,
+    "split_score": 0.8126
+  },
+  {
+    "title": "銀の墓守り〈ガーディアン〉",
+    "anime_id": 32936,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "completion_rate": 0.7502,
+    "split_score": 0.811
+  },
+  {
+    "title": "ステラ女学院高等科C³部（しーきゅーぶ）",
+    "anime_id": 17821,
+    "year": 2013,
+    "episodes": 13,
+    "genres": [
+      "Military",
+      "School",
+      "Sports"
+    ],
+    "completion_rate": 0.7508,
+    "split_score": 0.81
+  },
+  {
+    "title": "シュガシュガルーン",
+    "anime_id": 1642,
+    "year": 2005,
+    "episodes": 51,
+    "genres": [
+      "Fantasy",
+      "Magic",
+      "Shoujo"
+    ],
+    "completion_rate": 0.751,
+    "split_score": 0.8097
+  },
+  {
+    "title": "フォトカノ",
+    "anime_id": 16397,
+    "year": 2013,
+    "episodes": 13,
+    "genres": [
+      "Ecchi",
+      "Romance",
+      "School"
+    ],
+    "completion_rate": 0.7538,
+    "split_score": 0.8053
+  },
+  {
+    "title": "影鰐-KAGEWANI-",
+    "anime_id": 30524,
+    "year": 2015,
+    "episodes": 13,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Supernatural",
+      "Thriller"
+    ],
+    "completion_rate": 0.7553,
+    "split_score": 0.8028
+  },
+  {
+    "title": "神霊狩 GHOST HOUND",
+    "anime_id": 2596,
+    "year": 2007,
+    "episodes": 22,
+    "genres": [
+      "Sci-Fi",
+      "Mystery",
+      "Psychological",
+      "Supernatural"
+    ],
+    "completion_rate": 0.757,
+    "split_score": 0.8
+  },
+  {
+    "title": "リトルバスターズ!",
+    "anime_id": 13655,
+    "year": 2012,
+    "episodes": 26,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Supernatural",
+      "Drama",
+      "School"
+    ],
+    "completion_rate": 0.7572,
+    "split_score": 0.7996
+  },
+  {
+    "title": "ジャングルはいつもハレのちグゥ",
+    "anime_id": 253,
+    "year": 2001,
+    "episodes": 26,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "School"
+    ],
+    "completion_rate": 0.7586,
+    "split_score": 0.7974
+  },
+  {
+    "title": "ちゅーぶら!!",
+    "anime_id": 6645,
+    "year": 2010,
+    "episodes": 12,
+    "genres": [
+      "Ecchi",
+      "Comedy",
+      "School",
+      "Seinen"
+    ],
+    "completion_rate": 0.7597,
+    "split_score": 0.7956
+  },
+  {
+    "title": "マドラックス",
+    "anime_id": 252,
+    "year": 2004,
+    "episodes": 26,
+    "genres": [
+      "Military",
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Drama",
+      "Magic",
+      "Shounen"
+    ],
+    "completion_rate": 0.7605,
+    "split_score": 0.7941
+  },
+  {
+    "title": "地獄少女",
+    "anime_id": 228,
+    "year": 2005,
+    "episodes": 26,
+    "genres": [
+      "Mystery",
+      "Horror",
+      "Psychological",
+      "Supernatural"
+    ],
+    "completion_rate": 0.7615,
+    "split_score": 0.7926
+  },
+  {
+    "title": "スケッチブック ～full color's～",
+    "anime_id": 2942,
+    "year": 2007,
+    "episodes": 13,
+    "genres": [
+      "Slice of Life",
+      "Comedy"
+    ],
+    "completion_rate": 0.7633,
+    "split_score": 0.7896
+  },
+  {
+    "title": "愛天使伝説 ウェディングピーチ",
+    "anime_id": 1533,
+    "year": 1995,
+    "episodes": 51,
+    "genres": [
+      "Adventure",
+      "Magic",
+      "Comedy",
+      "Romance",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7642,
+    "split_score": 0.7879
+  },
+  {
+    "title": "普通の女子校生が【ろこどる】やってみた。",
+    "anime_id": 22189,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Seinen"
+    ],
+    "completion_rate": 0.7646,
+    "split_score": 0.7873
+  },
+  {
+    "title": "東京ミュウミュウ",
+    "anime_id": 687,
+    "year": 2002,
+    "episodes": 52,
+    "genres": [
+      "Sci-Fi",
+      "Comedy",
+      "Magic",
+      "Romance",
+      "Fantasy",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7662,
+    "split_score": 0.7845
+  },
+  {
+    "title": "テガミバチ",
+    "anime_id": 6444,
+    "year": 2009,
+    "episodes": 25,
+    "genres": [
+      "Adventure",
+      "Supernatural",
+      "Fantasy",
+      "Shounen"
+    ],
+    "completion_rate": 0.7679,
+    "split_score": 0.7817
+  },
+  {
+    "title": "電脳コイル",
+    "anime_id": 2164,
+    "year": 2007,
+    "episodes": 26,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.7744,
+    "split_score": 0.7703
+  },
+  {
+    "title": "彩雲国物語",
+    "anime_id": 957,
+    "year": 2006,
+    "episodes": 39,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Historical",
+      "Romance"
+    ],
+    "completion_rate": 0.7748,
+    "split_score": 0.7696
+  },
+  {
+    "title": "テイルズ オブ ジ アビス",
+    "anime_id": 4884,
+    "year": 2008,
+    "episodes": 26,
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "completion_rate": 0.7752,
+    "split_score": 0.7688
+  },
+  {
+    "title": "ネギま!?",
+    "anime_id": 1546,
+    "year": 2006,
+    "episodes": 26,
+    "genres": [
+      "Adventure",
+      "Harem",
+      "Comedy",
+      "Supernatural",
+      "Magic",
+      "Romance",
+      "Ecchi",
+      "Fantasy",
+      "School"
+    ],
+    "completion_rate": 0.7771,
+    "split_score": 0.7655
+  },
+  {
+    "title": "日常",
+    "anime_id": 10165,
+    "year": 2011,
+    "episodes": 26,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.7784,
+    "split_score": 0.763
+  },
+  {
+    "title": "爆裂天使",
+    "anime_id": 109,
+    "year": 2004,
+    "episodes": 24,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Mecha",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.7785,
+    "split_score": 0.7628
+  },
+  {
+    "title": "しおんの王 - The Flowers of Hard Blood",
+    "anime_id": 2562,
+    "year": 2007,
+    "episodes": 22,
+    "genres": [
+      "Drama",
+      "Game",
+      "Mystery",
+      "Thriller"
+    ],
+    "completion_rate": 0.7799,
+    "split_score": 0.7604
+  },
+  {
+    "title": "ノエイン もうひとりの君へ",
+    "anime_id": 584,
+    "year": 2005,
+    "episodes": 24,
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Slice of Life",
+      "Drama"
+    ],
+    "completion_rate": 0.7825,
+    "split_score": 0.7556
+  },
+  {
+    "title": "満月をさがして",
+    "anime_id": 122,
+    "year": 2002,
+    "episodes": 52,
+    "genres": [
+      "Music",
+      "Comedy",
+      "Supernatural",
+      "Drama",
+      "Romance",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7829,
+    "split_score": 0.7548
+  },
+  {
+    "title": "ストロベリー・パニック",
+    "anime_id": 855,
+    "year": 2006,
+    "episodes": 26,
+    "genres": [
+      "Drama",
+      "Romance",
+      "School",
+      "Shoujo Ai"
+    ],
+    "completion_rate": 0.7839,
+    "split_score": 0.753
+  },
+  {
+    "title": "ベルサイユのばら",
+    "anime_id": 338,
+    "year": 1979,
+    "episodes": 40,
+    "genres": [
+      "Military",
+      "Historical",
+      "Drama",
+      "Romance",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7848,
+    "split_score": 0.7513
+  },
+  {
+    "title": "スカイガールズ",
+    "anime_id": 2604,
+    "year": 2007,
+    "episodes": 26,
+    "genres": [
+      "Mecha",
+      "Military",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.7853,
+    "split_score": 0.7504
+  },
+  {
+    "title": "ぼくらの",
+    "anime_id": 1690,
+    "year": 2007,
+    "episodes": 24,
+    "genres": [
+      "Sci-Fi",
+      "Psychological",
+      "Drama",
+      "Mecha",
+      "Seinen"
+    ],
+    "completion_rate": 0.788,
+    "split_score": 0.7453
+  },
+  {
+    "title": ".hack//SIGN",
+    "anime_id": 48,
+    "year": 2002,
+    "episodes": 26,
+    "genres": [
+      "Game",
+      "Sci-Fi",
+      "Adventure",
+      "Mystery",
+      "Magic",
+      "Fantasy"
+    ],
+    "completion_rate": 0.7882,
+    "split_score": 0.7449
+  },
+  {
+    "title": "学校の怪談",
+    "anime_id": 1281,
+    "year": 2000,
+    "episodes": 19,
+    "genres": [
+      "Mystery",
+      "Horror",
+      "Supernatural"
+    ],
+    "completion_rate": 0.7885,
+    "split_score": 0.7444
+  },
+  {
+    "title": "RAINBOW 二舎六房の七人",
+    "anime_id": 6114,
+    "year": 2010,
+    "episodes": 26,
+    "genres": [
+      "Drama",
+      "Historical",
+      "Seinen",
+      "Thriller"
+    ],
+    "completion_rate": 0.7894,
+    "split_score": 0.7427
+  },
+  {
+    "title": "新世界より",
+    "anime_id": 13125,
+    "year": 2012,
+    "episodes": 25,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi",
+      "Supernatural"
+    ],
+    "completion_rate": 0.7932,
+    "split_score": 0.7352
+  },
+  {
+    "title": "魔人探偵 脳噛ネウロ",
+    "anime_id": 2985,
+    "year": 2007,
+    "episodes": 25,
+    "genres": [
+      "Mystery",
+      "Comedy",
+      "Demons",
+      "Supernatural",
+      "Shounen"
+    ],
+    "completion_rate": 0.7934,
+    "split_score": 0.7349
+  },
+  {
+    "title": "キャンディ・キャンディ",
+    "anime_id": 2800,
+    "year": 1976,
+    "episodes": 115,
+    "genres": [
+      "Slice of Life",
+      "Drama",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7934,
+    "split_score": 0.7348
+  },
+  {
+    "title": "らき☆すた",
+    "anime_id": 1887,
+    "year": 2007,
+    "episodes": 24,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Parody",
+      "School"
+    ],
+    "completion_rate": 0.7961,
+    "split_score": 0.7297
+  },
+  {
+    "title": "無限のリヴァイアス",
+    "anime_id": 593,
+    "year": 1999,
+    "episodes": 26,
+    "genres": [
+      "Drama",
+      "Mecha",
+      "Military",
+      "Psychological",
+      "Sci-Fi",
+      "Space"
+    ],
+    "completion_rate": 0.7964,
+    "split_score": 0.729
+  },
+  {
+    "title": "花より男子",
+    "anime_id": 106,
+    "year": 1996,
+    "episodes": 51,
+    "genres": [
+      "Drama",
+      "Romance",
+      "School",
+      "Shoujo"
+    ],
+    "completion_rate": 0.7968,
+    "split_score": 0.7282
+  },
+  {
+    "title": "ソウルイーター",
+    "anime_id": 3588,
+    "year": 2008,
+    "episodes": 51,
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Comedy",
+      "Supernatural",
+      "Shounen"
+    ],
+    "completion_rate": 0.8048,
+    "split_score": 0.7121
+  },
+  {
+    "title": "キルラキル",
+    "anime_id": 18679,
+    "year": 2013,
+    "episodes": 24,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Super Power",
+      "Ecchi",
+      "School"
+    ],
+    "completion_rate": 0.8439,
+    "split_score": 0.625
+  },
+  {
+    "title": "ナルト",
+    "anime_id": 20,
+    "year": 2002,
+    "episodes": 220,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Super Power",
+      "Martial Arts",
+      "Shounen"
+    ],
+    "completion_rate": 0.8495,
+    "split_score": 0.6111
+  },
+  {
+    "title": "デュラララ!!",
+    "anime_id": 6746,
+    "year": 2010,
+    "episodes": 24,
+    "genres": [
+      "Action",
+      "Mystery",
+      "Supernatural"
+    ],
+    "completion_rate": 0.8655,
+    "split_score": 0.5696
+  },
+  {
+    "title": "天元突破グレンラガン",
+    "anime_id": 2001,
+    "year": 2007,
+    "episodes": 27,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Mecha",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.8762,
+    "split_score": 0.5401
+  },
+  {
+    "title": "化物語",
+    "anime_id": 5081,
+    "year": 2009,
+    "episodes": 15,
+    "genres": [
+      "Romance",
+      "Supernatural",
+      "Mystery",
+      "Vampire"
+    ],
+    "completion_rate": 0.8785,
+    "split_score": 0.5336
+  },
+  {
+    "title": "サイコパス",
+    "anime_id": 13601,
+    "year": 2012,
+    "episodes": 22,
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Police",
+      "Psychological"
+    ],
+    "completion_rate": 0.8892,
+    "split_score": 0.5023
+  },
+  {
+    "title": "鋼の錬金術師",
+    "anime_id": 121,
+    "year": 2003,
+    "episodes": 51,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Magic",
+      "Military",
+      "Shounen"
+    ],
+    "completion_rate": 0.8965,
+    "split_score": 0.4799
+  },
+  {
+    "title": "CLANNAD",
+    "anime_id": 2167,
+    "year": 2007,
+    "episodes": 23,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance",
+      "School",
+      "Slice of Life",
+      "Supernatural"
+    ],
+    "completion_rate": 0.901,
+    "split_score": 0.466
+  },
+  {
+    "title": "アカメが斬る！",
+    "anime_id": 22199,
+    "year": 2014,
+    "episodes": 24,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Shounen"
+    ],
+    "completion_rate": 0.9077,
+    "split_score": 0.4442
+  },
+  {
+    "title": "ソードアート・オンライン II",
+    "anime_id": 21881,
+    "year": 2014,
+    "episodes": 24,
+    "genres": [
+      "Action",
+      "Game",
+      "Adventure",
+      "Romance",
+      "Fantasy"
+    ],
+    "completion_rate": 0.9086,
+    "split_score": 0.4411
+  },
+  {
+    "title": "未来日記",
+    "anime_id": 10620,
+    "year": 2011,
+    "episodes": 26,
+    "genres": [
+      "Action",
+      "Mystery",
+      "Psychological",
+      "Shounen",
+      "Supernatural",
+      "Thriller"
+    ],
+    "completion_rate": 0.9101,
+    "split_score": 0.4361
+  },
+  {
+    "title": "鋼の錬金術師 FULLMETAL ALCHEMIST",
+    "anime_id": 5114,
+    "year": 2009,
+    "episodes": 64,
+    "genres": [
+      "Action",
+      "Military",
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Magic",
+      "Fantasy",
+      "Shounen"
+    ],
+    "completion_rate": 0.9147,
+    "split_score": 0.4207
+  },
+  {
+    "title": "涼宮ハルヒの憂鬱",
+    "anime_id": 849,
+    "year": 2006,
+    "episodes": 14,
+    "genres": [
+      "Comedy",
+      "Mystery",
+      "Parody",
+      "School",
+      "Sci-Fi",
+      "Slice of Life"
+    ],
+    "completion_rate": 0.9166,
+    "split_score": 0.4139
+  },
+  {
+    "title": "青の祓魔師(エクソシスト)",
+    "anime_id": 9919,
+    "year": 2011,
+    "episodes": 25,
+    "genres": [
+      "Action",
+      "Demons",
+      "Fantasy",
+      "Shounen",
+      "Supernatural"
+    ],
+    "completion_rate": 0.9186,
+    "split_score": 0.4071
+  },
+  {
+    "title": "STEINS;GATE",
+    "anime_id": 9253,
+    "year": 2011,
+    "episodes": 24,
+    "genres": [
+      "Thriller",
+      "Sci-Fi"
+    ],
+    "completion_rate": 0.9193,
+    "split_score": 0.4047
+  },
+  {
+    "title": "四月は君の嘘",
+    "anime_id": 23273,
+    "year": 2014,
+    "episodes": 22,
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.9206,
+    "split_score": 0.3999
+  },
+  {
+    "title": "エルフェンリート",
+    "anime_id": 226,
+    "year": 2004,
+    "episodes": 13,
+    "genres": [
+      "Action",
+      "Horror",
+      "Psychological",
+      "Supernatural",
+      "Drama",
+      "Romance",
+      "Seinen"
+    ],
+    "completion_rate": 0.9228,
+    "split_score": 0.3924
+  },
+  {
+    "title": "デスノート",
+    "anime_id": 1535,
+    "year": 2006,
+    "episodes": 37,
+    "genres": [
+      "Mystery",
+      "Police",
+      "Psychological",
+      "Supernatural",
+      "Thriller",
+      "Shounen"
+    ],
+    "completion_rate": 0.9231,
+    "split_score": 0.3911
+  },
+  {
+    "title": "新世紀エヴァンゲリオン",
+    "anime_id": 30,
+    "year": 1995,
+    "episodes": 26,
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Dementia",
+      "Psychological",
+      "Drama",
+      "Mecha"
+    ],
+    "completion_rate": 0.9248,
+    "split_score": 0.3852
+  },
+  {
+    "title": "とらドラ！",
+    "anime_id": 4224,
+    "year": 2008,
+    "episodes": 25,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Romance",
+      "School"
+    ],
+    "completion_rate": 0.9288,
+    "split_score": 0.3705
+  },
+  {
+    "title": "ソードアート・オンライン",
+    "anime_id": 11757,
+    "year": 2012,
+    "episodes": 25,
+    "genres": [
+      "Action",
+      "Game",
+      "Adventure",
+      "Romance",
+      "Fantasy"
+    ],
+    "completion_rate": 0.9292,
+    "split_score": 0.369
+  },
+  {
+    "title": "デス・パレード",
+    "anime_id": 28223,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Game",
+      "Mystery",
+      "Psychological",
+      "Drama",
+      "Thriller"
+    ],
+    "completion_rate": 0.93,
+    "split_score": 0.3659
+  },
+  {
+    "title": "コードギアス 反逆のルルーシュ",
+    "anime_id": 1575,
+    "year": 2006,
+    "episodes": 25,
+    "genres": [
+      "Action",
+      "Military",
+      "Sci-Fi",
+      "Super Power",
+      "Drama",
+      "Mecha",
+      "School"
+    ],
+    "completion_rate": 0.9351,
+    "split_score": 0.3465
+  },
+  {
+    "title": "学園黙示録 HIGHSCHOOL OF THE DEAD",
+    "anime_id": 8074,
+    "year": 2010,
+    "episodes": 12,
+    "genres": [
+      "Action",
+      "Horror",
+      "Supernatural",
+      "Ecchi",
+      "Shounen"
+    ],
+    "completion_rate": 0.9356,
+    "split_score": 0.3449
+  },
+  {
+    "title": "魔法少女まどか★マギカ",
+    "anime_id": 9756,
+    "year": 2011,
+    "episodes": 12,
+    "genres": [
+      "Psychological",
+      "Drama",
+      "Magic",
+      "Thriller"
+    ],
+    "completion_rate": 0.9357,
+    "split_score": 0.3443
+  },
+  {
+    "title": "中二病でも恋がしたい!",
+    "anime_id": 14741,
+    "year": 2012,
+    "episodes": 12,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Drama",
+      "Romance",
+      "School"
+    ],
+    "completion_rate": 0.9368,
+    "split_score": 0.34
+  },
+  {
+    "title": "寄生獣 セイの格率",
+    "anime_id": 22535,
+    "year": 2014,
+    "episodes": 24,
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Horror",
+      "Psychological",
+      "Drama",
+      "Seinen"
+    ],
+    "completion_rate": 0.9383,
+    "split_score": 0.3343
+  },
+  {
+    "title": "七つの大罪",
+    "anime_id": 23755,
+    "year": 2014,
+    "episodes": 24,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Ecchi",
+      "Fantasy",
+      "Magic",
+      "Shounen",
+      "Supernatural"
+    ],
+    "completion_rate": 0.9385,
+    "split_score": 0.3333
+  },
+  {
+    "title": "Re：ゼロから始める異世界生活",
+    "anime_id": 31240,
+    "year": 2016,
+    "episodes": 25,
+    "genres": [
+      "Psychological",
+      "Drama",
+      "Thriller",
+      "Fantasy"
+    ],
+    "completion_rate": 0.9385,
+    "split_score": 0.3333
+  },
+  {
+    "title": "アナザー",
+    "anime_id": 11111,
+    "year": 2012,
+    "episodes": 12,
+    "genres": [
+      "Mystery",
+      "Horror",
+      "Supernatural",
+      "Thriller",
+      "School"
+    ],
+    "completion_rate": 0.9423,
+    "split_score": 0.3182
+  },
+  {
+    "title": "東京喰種√A",
+    "anime_id": 27899,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Action",
+      "Mystery",
+      "Horror",
+      "Psychological",
+      "Supernatural",
+      "Drama",
+      "Seinen"
+    ],
+    "completion_rate": 0.9449,
+    "split_score": 0.3078
+  },
+  {
+    "title": "フェイト/ゼロ",
+    "anime_id": 10087,
+    "year": 2011,
+    "episodes": 13,
+    "genres": [
+      "Action",
+      "Supernatural",
+      "Magic",
+      "Fantasy"
+    ],
+    "completion_rate": 0.9461,
+    "split_score": 0.3029
+  },
+  {
+    "title": "Angel Beats!（エンジェルビーツ）",
+    "anime_id": 6547,
+    "year": 2010,
+    "episodes": 13,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "School",
+      "Supernatural"
+    ],
+    "completion_rate": 0.9467,
+    "split_score": 0.3001
+  },
+  {
+    "title": "ノラガミ",
+    "anime_id": 20507,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Supernatural",
+      "Shounen"
+    ],
+    "completion_rate": 0.9505,
+    "split_score": 0.2844
+  },
+  {
+    "title": "ノーゲーム・ノーライフ",
+    "anime_id": 19815,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Game",
+      "Adventure",
+      "Comedy",
+      "Supernatural",
+      "Ecchi",
+      "Fantasy"
+    ],
+    "completion_rate": 0.9509,
+    "split_score": 0.2825
+  },
+  {
+    "title": "やはり俺の青春ラブコメはまちがっている。",
+    "anime_id": 14813,
+    "year": 2013,
+    "episodes": 13,
+    "genres": [
+      "Slice of Life",
+      "Comedy",
+      "Drama",
+      "Romance",
+      "School"
+    ],
+    "completion_rate": 0.9514,
+    "split_score": 0.2805
+  },
+  {
+    "title": "東京喰種-トーキョーグール-",
+    "anime_id": 22319,
+    "year": 2014,
+    "episodes": 12,
+    "genres": [
+      "Action",
+      "Mystery",
+      "Horror",
+      "Psychological",
+      "Supernatural",
+      "Drama",
+      "Seinen"
+    ],
+    "completion_rate": 0.954,
+    "split_score": 0.2691
+  },
+  {
+    "title": "はたらく魔王さま!",
+    "anime_id": 15809,
+    "year": 2013,
+    "episodes": 13,
+    "genres": [
+      "Comedy",
+      "Demons",
+      "Supernatural",
+      "Romance",
+      "Fantasy"
+    ],
+    "completion_rate": 0.9542,
+    "split_score": 0.2682
+  },
+  {
+    "title": "進撃の巨人",
+    "anime_id": 16498,
+    "year": 2013,
+    "episodes": 25,
+    "genres": [
+      "Action",
+      "Military",
+      "Mystery",
+      "Super Power",
+      "Drama",
+      "Fantasy",
+      "Shounen"
+    ],
+    "completion_rate": 0.9558,
+    "split_score": 0.2612
+  },
+  {
+    "title": "あの日見た花の名前を僕達はまだ知らない。",
+    "anime_id": 9989,
+    "year": 2011,
+    "episodes": 11,
+    "genres": [
+      "Slice of Life",
+      "Supernatural",
+      "Drama"
+    ],
+    "completion_rate": 0.9598,
+    "split_score": 0.243
+  },
+  {
+    "title": "この素晴らしい世界に祝福を！",
+    "anime_id": 30831,
+    "year": 2016,
+    "episodes": 10,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Magic",
+      "Parody",
+      "Supernatural"
+    ],
+    "completion_rate": 0.9601,
+    "split_score": 0.242
+  },
+  {
+    "title": "ワンパンマン",
+    "anime_id": 30276,
+    "year": 2015,
+    "episodes": 12,
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Comedy",
+      "Parody",
+      "Super Power",
+      "Supernatural"
+    ],
+    "completion_rate": 0.9665,
+    "split_score": 0.2117
+  },
+  {
+    "title": "僕だけがいない街",
+    "anime_id": 31043,
+    "year": 2016,
+    "episodes": 12,
+    "genres": [
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Seinen"
+    ],
+    "completion_rate": 0.9687,
+    "split_score": 0.201
+  },
+  {
+    "title": "コードギアス 反逆のルルーシュ 続編",
+    "anime_id": 2904,
+    "year": 2008,
+    "episodes": 25,
+    "genres": [
+      "Action",
+      "Military",
+      "Sci-Fi",
+      "Super Power",
+      "Drama",
+      "Mecha"
+    ],
+    "completion_rate": 0.9701,
+    "split_score": 0.1941
+  },
+  {
+    "title": "進撃の巨人 Season2",
+    "anime_id": 25777,
+    "year": 2017,
+    "episodes": 12,
+    "genres": [
+      "Action",
+      "Military",
+      "Mystery",
+      "Super Power",
+      "Drama",
+      "Fantasy",
+      "Shounen"
+    ],
+    "completion_rate": 0.9733,
+    "split_score": 0.1775
+  },
+  {
+    "title": "僕のヒーローアカデミア",
+    "anime_id": 31964,
+    "year": 2016,
+    "episodes": 13,
+    "genres": [
+      "Action",
+      "Comedy",
+      "School",
+      "Shounen",
+      "Super Power"
+    ],
+    "completion_rate": 0.9738,
+    "split_score": 0.1748
+  },
+  {
+    "title": "僕のヒーローアカデミア",
+    "anime_id": 33486,
+    "year": 2017,
+    "episodes": 25,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Super Power",
+      "School",
+      "Shounen"
+    ],
+    "completion_rate": 0.9743,
+    "split_score": 0.1724
+  }
+]
