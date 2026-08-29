@@ -21,6 +21,13 @@ export default function TypeDiagnosisCard({ profile }: Props) {
   const { jp } = useGenreJp();
   const pct = (v: number | null) => (v == null ? "―" : `${Math.round(v * 100)}%`);
 
+  // 「合う話数」はデータがあるバケットが2つ以上あって初めて相対比較として意味を持つ。
+  // 1つしかデータが無い場合は「そこしかデータが無い」だけであり「合う」の断定を避ける。
+  const sufficientBucketCount = profile.episode_buckets.filter(
+    (b) => b.count >= 3 && b.completion_rate != null,
+  ).length;
+  const bestBucketIsOnlyData = profile.best_episode_bucket != null && sufficientBucketCount <= 1;
+
   return (
     <div
       style={{
@@ -102,6 +109,11 @@ export default function TypeDiagnosisCard({ profile }: Props) {
             <div style={{ margin: "6px 0 0" }}>
               <Num size="lg">{profile.best_episode_bucket ? profile.best_episode_bucket.range : "データ不足"}</Num>
             </div>
+            {bestBucketIsOnlyData && (
+              <p style={{ margin: "2px 0 0", fontSize: "var(--fl-text-caption)", color: "var(--fl-color-text-muted)" }}>
+                （他のレンジはデータ不足）
+              </p>
+            )}
           </div>
           <div
             style={{
@@ -217,7 +229,9 @@ export default function TypeDiagnosisCard({ profile }: Props) {
                   </span>
                 ))
               ) : (
-                <span style={{ fontSize: "var(--fl-text-body-sm)", color: "var(--fl-color-text-muted)" }}>―</span>
+                <span style={{ fontSize: "var(--fl-text-body-sm)", color: "var(--fl-color-text-muted)" }}>
+                  特に避ける傾向は見られません
+                </span>
               )}
             </div>
           </div>

@@ -398,25 +398,23 @@ def build_predict_single_response(store: DataStore, raw_responses: list[dict], t
     negative, positive = [], []
     episodes = store.episodes(target_anime_id)
     a_genres = store.genres(target_anime_id)
-    best_bucket = profile_vectors.best_episode_bucket
-    if episodes is not None and best_bucket is not None:
-        if bucket_index_for_episodes(episodes) > best_bucket["index"]:
-            negative.append({
-                "type": "episode_bucket",
-                "text": f"全{episodes}話（あなたが完走しやすいのは{best_bucket['range']}）",
-            })
-        else:
-            positive.append({
-                "type": "episode_bucket",
-                "text": f"全{episodes}話は、あなたが完走しやすい話数レンジ内です",
-            })
+    # at_risk(build_reasons)と同じ判定ロジックを使う。バケット比較で決着しない場合
+    # （27話〜のように上限なしのバケット内での差）は実話数の直接比較にフォールバックする。
+    ep_reason = explain.episode_reason(profile_vectors, episodes)
+    if ep_reason is not None:
+        text, is_negative = ep_reason
+        (negative if is_negative else positive).append({"type": "episode_bucket", "text": text})
+
     # 分母が薄いジャンル（回答本数が少なく統計的に無意味な完走率0%/100%等）を根拠に
     # しないよう、at_risk/will_completeと同じ displayed_genre_hits を使う
-    # （表示先頭2ジャンル・回答3本以上のみ）。
+    # （表示先頭2ジャンル・回答3本以上のみ）。母集団平均（pool_completion_rate_mean）を
+    # 閾値にすることで、build_reasons/build_will_complete_reasonと同じ基準に揃える
+    # （固定0.5だと「母集団平均70%に対し60%」のようなケースを誤って有利な要素として
+    # 提示してしまう）。
     genre_hits = explain.displayed_genre_hits(store, profile_vectors, target_anime_id)
     if genre_hits:
         g, rate = min(genre_hits, key=lambda x: x[1])
-        (negative if rate < 0.5 else positive).append({
+        (negative if rate < store.pool_completion_rate_mean else positive).append({
             "type": "genre", "text": f"{_jp(g)}のあなたの完走率は{rate*100:.0f}%",
         })
 

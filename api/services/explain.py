@@ -35,6 +35,27 @@ def displayed_genre_hits(store: DataStore, profile: UserProfileVectors, anime_id
     ]
 
 
+def episode_reason(profile: UserProfileVectors, episodes: int | None) -> tuple[str, bool] | None:
+    """話数に関する理由文を1つ返す。(text, is_negative) のタプル、判定できなければNone。
+
+    まずバケット比較（粗い判定）を行い、候補が「合う話数」バケットより後ろのバケットなら
+    負（続きにくい方向）。手前のバケットなら正（完走しやすい方向）。
+    同じバケットの場合は判定を保留せず、実話数どうしを直接比較する
+    （27話〜が上限なしバケットのため、27話と203話が同バケットに入り、
+    バケット比較だけでは差を見落とすことがある）。ユーザーが完走した最長話数より
+    候補が長ければ負、そうでなければ正とする。
+    """
+    best = profile.best_episode_bucket
+    if episodes is None or best is None:
+        return None
+    cand_idx = bucket_index_for_episodes(episodes)
+    if cand_idx > best["index"]:
+        return f"全{episodes}話。あなたが完走しやすいのは{best['range']}です", True
+    if cand_idx == best["index"] and profile.max_completed_episodes is not None and episodes > profile.max_completed_episodes:
+        return f"全{episodes}話。あなたが完走した最長は{profile.max_completed_episodes}話です", True
+    return f"全{episodes}話は、あなたが完走しやすい話数レンジ内です", False
+
+
 def build_reasons(store: DataStore, profile: UserProfileVectors, anime_id: int, max_reasons: int = 3) -> list[dict]:
     """候補作品に対する理由を最大3件、実データに基づいて生成する。
 
@@ -43,14 +64,19 @@ def build_reasons(store: DataStore, profile: UserProfileVectors, anime_id: int, 
     reasons: list[dict] = []
 
     episodes = store.episodes(anime_id)
-    best = profile.best_episode_bucket
-    if episodes is not None and best is not None and bucket_index_for_episodes(episodes) > best["index"]:
-        reasons.append({
-            "type": "episode_bucket",
-            "text": f"全{episodes}話。あなたが完走しやすいのは{best['range']}です",
-        })
+    ep_reason = episode_reason(profile, episodes)
+    if ep_reason is not None:
+        text, is_negative = ep_reason
+        if is_negative:  # at_riskの理由は「続きにくい」方向のみ使う
+            reasons.append({"type": "episode_bucket", "text": text})
 
-    genre_hits = displayed_genre_hits(store, profile, anime_id)
+    # ジャンル別完走率は、母集団平均（pool_completion_rate_mean、画面の「全作品平均」と
+    # 同じ値）を下回るものだけを「続きにくい理由」に使う。上回るジャンルは有利な要素で
+    # あり、続きにくい理由にはならない。
+    genre_hits = [
+        (g, rate) for g, rate in displayed_genre_hits(store, profile, anime_id)
+        if rate < store.pool_completion_rate_mean
+    ]
     if genre_hits:
         g, rate = min(genre_hits, key=lambda x: x[1])
         reasons.append({
@@ -93,7 +119,12 @@ def build_will_complete_reason(
     if population_completion_rate < 0.6 and completion_prob - population_completion_rate > 0.15:
         return "一般には完走されにくいですが、あなたの傾向なら見切れそうです"
 
-    genre_hits = displayed_genre_hits(store, profile, anime_id)
+    # 問題1の対称な誤りを避ける: 母集団平均を下回るジャンルを「完走実績」の根拠に
+    # 使わない（下回っているのに強みとして提示するのは事実と逆の印象を与える）。
+    genre_hits = [
+        (g, rate) for g, rate in displayed_genre_hits(store, profile, anime_id)
+        if rate > store.pool_completion_rate_mean
+    ]
     if genre_hits:
         g, rate = max(genre_hits, key=lambda x: x[1])
         return f"{_jp(g)}の完走実績があります"

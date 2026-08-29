@@ -31,6 +31,7 @@ class UserProfileVectors:
     endurance_episodes: int | None
     episode_buckets: list[dict]
     best_episode_bucket: dict | None
+    max_completed_episodes: int | None
     user_completion_rate: float | None
     completed_vector: np.ndarray | None
     dropped_vector: np.ndarray | None
@@ -52,6 +53,12 @@ def build_profile_vectors(store: DataStore, responses: list[Response]) -> UserPr
     episode_buckets = compute_episode_buckets(responses)
     best_bucket = best_episode_bucket(episode_buckets)
     completion_rate = compute_completion_rate(responses)
+
+    # バケットが粗い（27話〜が上限なし）ため、同じバケット内でも27話と203話のような
+    # 大きな差を見落としうる。実話数どうしの直接比較のフォールバックに使う
+    # （explain.episode_reason / api/services/predict.py の factors 生成）。
+    completed_episodes = [r.episodes for r in responses if r.label == "completed" and r.episodes]
+    max_completed_episodes = max(completed_episodes) if completed_episodes else None
 
     comp_embs = [store.embedding(r.anime_id) for r in responses if r.label == "completed"]
     comp_embs = [e for e in comp_embs if e is not None]
@@ -77,6 +84,7 @@ def build_profile_vectors(store: DataStore, responses: list[Response]) -> UserPr
         endurance_episodes=endurance,
         episode_buckets=episode_buckets,
         best_episode_bucket=best_bucket,
+        max_completed_episodes=max_completed_episodes,
         user_completion_rate=completion_rate,
         completed_vector=comp_vec,
         dropped_vector=drop_vec,
