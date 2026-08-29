@@ -1,20 +1,64 @@
 .card {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  position: relative;
+  border: 1px solid var(--fl-color-border);
+  border-left: 4px solid transparent;
+  border-radius: var(--fl-radius-md);
   padding: 12px 14px;
   margin: 0 12px 12px;
-  background: var(--color-surface);
-  transition: background-color 0.15s, transform 0.1s;
+  background: var(--fl-color-surface);
+  box-shadow: var(--fl-shadow-sm);
+  transition: background-color 0.15s, border-color 0.15s;
 }
 
-.card.selected {
-  background: #f2f7fc;
+.card.selectedLoved {
+  background: var(--fl-color-pink-tint);
+  border-left-color: var(--fl-color-pink);
+}
+
+.card.selectedCompleted {
+  background: var(--fl-color-success-tint);
+  border-left-color: var(--fl-color-success);
+}
+
+.card.selectedDropped {
+  background: var(--fl-color-violet-tint);
+  border-left-color: var(--fl-color-violet);
+}
+
+.statusPill {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--fl-font-jp);
+  font-size: var(--fl-text-caption);
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: var(--fl-radius-pill);
+}
+
+.statusPill.loved {
+  background: var(--fl-color-pink);
+  color: #fff;
+}
+
+.statusPill.completed {
+  background: var(--fl-color-success);
+  color: #fff;
+}
+
+.statusPill.dropped {
+  background: var(--fl-color-violet);
+  color: #fff;
 }
 
 .title {
+  font-family: var(--fl-font-jp);
   font-weight: 700;
-  font-size: 15px;
-  margin: 0 0 4px;
+  font-size: var(--fl-text-body);
+  margin: 0 28px 4px 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -22,8 +66,8 @@
 }
 
 .meta {
-  font-size: 12.5px;
-  color: var(--color-text-muted);
+  font-size: var(--fl-text-body-sm);
+  color: var(--fl-color-text-muted);
   margin-bottom: 10px;
 }
 
@@ -35,37 +79,38 @@
 .btn {
   flex: 1;
   min-height: 44px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-text);
+  border-radius: var(--fl-radius-sm);
+  border: 1px solid var(--fl-color-border);
+  background: var(--fl-color-surface);
+  font-family: var(--fl-font-jp);
+  font-size: var(--fl-text-body-sm);
+  font-weight: 700;
+  color: var(--fl-color-text-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  transition: transform 0.08s;
+  transition: transform 0.08s, background-color 0.15s, border-color 0.15s, color 0.15s;
 }
 
 .btn:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
 
 .btnLoved.active {
-  background: #ffe3e6;
-  border-color: #e05a68;
-  color: #a3243a;
+  background: var(--fl-color-pink-tint);
+  border-color: var(--fl-color-pink);
+  color: var(--fl-color-pink-dark);
 }
 
 .btnCompleted.active {
-  background: #dcefe0;
-  border-color: #3f9450;
-  color: #256134;
+  background: var(--fl-color-success-tint);
+  border-color: var(--fl-color-success);
+  color: var(--fl-color-success-dark);
 }
 
 .btnDropped.active {
-  background: #eee3fb;
-  border-color: #8459c9;
-  color: #563a94;
+  background: var(--fl-color-violet-tint);
+  border-color: var(--fl-color-violet);
+  color: var(--fl-color-violet-dark);
 }

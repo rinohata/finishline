@@ -1,3 +1,5 @@
+import Num from "./Num";
+
 interface Props {
   count: number;
   onResetClick?: () => void;
@@ -20,8 +22,8 @@ export default function ProgressBar({ count, onResetClick }: Props) {
   return (
     <div style={{ padding: "8px 12px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <span style={{ fontSize: 12.5, fontWeight: 600, whiteSpace: "nowrap" }}>
-          {count}本回答
+        <span style={{ fontSize: "var(--fl-text-body-sm)", fontWeight: 700, whiteSpace: "nowrap", fontFamily: "var(--fl-font-jp)" }}>
+          <Num size="sm">{count}</Num>本回答
         </span>
         <div style={{ display: "flex", gap: 2, flex: 1 }}>
           {Array.from({ length: segments }).map((_, i) => (
@@ -30,8 +32,11 @@ export default function ProgressBar({ count, onResetClick }: Props) {
               style={{
                 flex: 1,
                 height: 6,
-                borderRadius: 3,
-                background: i < filledSegments ? "var(--color-primary)" : "var(--color-border)",
+                borderRadius: "var(--fl-radius-pill)",
+                background:
+                  i < filledSegments
+                    ? "linear-gradient(90deg, var(--fl-color-primary), var(--fl-color-success))"
+                    : "var(--fl-color-border)",
               }}
             />
           ))}
@@ -42,13 +47,15 @@ export default function ProgressBar({ count, onResetClick }: Props) {
             onClick={onResetClick}
             style={{
               flexShrink: 0,
+              minHeight: 32,
               padding: "5px 10px",
-              borderRadius: 999,
-              border: "1px solid var(--color-border)",
-              background: "var(--color-surface)",
-              color: "var(--color-text-muted)",
-              fontSize: 12,
-              fontWeight: 600,
+              borderRadius: "var(--fl-radius-pill)",
+              border: "1px solid var(--fl-color-border)",
+              background: "var(--fl-color-surface)",
+              color: "var(--fl-color-text-muted)",
+              fontFamily: "var(--fl-font-jp)",
+              fontSize: "var(--fl-text-caption)",
+              fontWeight: 700,
               whiteSpace: "nowrap",
             }}
           >
@@ -56,7 +63,7 @@ export default function ProgressBar({ count, onResetClick }: Props) {
           </button>
         )}
       </div>
-      <p className="muted" style={{ margin: "4px 0 0" }}>
+      <p style={{ margin: "4px 0 0", fontSize: "var(--fl-text-body-sm)", color: "var(--fl-color-text-muted)" }}>
         {message(count)}
       </p>
     </div>

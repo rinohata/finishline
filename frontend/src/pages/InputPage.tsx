@@ -94,8 +94,8 @@ export default function InputPage() {
           position: "sticky",
           top: 0,
           zIndex: 10,
-          background: "var(--color-surface)",
-          borderBottom: "1px solid var(--color-border)",
+          background: "var(--fl-color-surface)",
+          borderBottom: "1px solid var(--fl-color-border)",
         }}
       >
         <div style={{ padding: "10px 12px 0" }}>

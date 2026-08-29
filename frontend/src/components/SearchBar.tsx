@@ -23,8 +23,9 @@ export default function SearchBar({ onChange }: Props) {
         display: "flex",
         alignItems: "center",
         gap: 8,
-        border: "1px solid var(--color-border)",
-        borderRadius: 8,
+        border: "1px solid var(--fl-color-border)",
+        borderRadius: "var(--fl-radius-sm)",
+        background: "var(--fl-color-surface)",
         padding: "8px 12px",
       }}
     >
@@ -37,8 +38,10 @@ export default function SearchBar({ onChange }: Props) {
           flex: 1,
           border: "none",
           outline: "none",
-          fontSize: 14,
+          fontSize: "var(--fl-text-body)",
+          fontFamily: "var(--fl-font-jp)",
           background: "transparent",
+          color: "var(--fl-color-text)",
         }}
       />
     </div>

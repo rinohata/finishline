@@ -1,3 +1,5 @@
+import Num from "./Num";
+
 interface Props {
   count: number;
   isUpdate: boolean;
@@ -18,8 +20,9 @@ export default function FooterCTA({ count, isUpdate, onClick }: Props) {
         width: "100%",
         maxWidth: 720,
         padding: 12,
-        background: "var(--color-surface)",
-        borderTop: "1px solid var(--color-border)",
+        background: "var(--fl-color-surface)",
+        borderTop: "1px solid var(--fl-color-border)",
+        boxShadow: "var(--fl-shadow-lg)",
       }}
     >
       <button
@@ -27,16 +30,22 @@ export default function FooterCTA({ count, isUpdate, onClick }: Props) {
         onClick={onClick}
         style={{
           width: "100%",
+          minHeight: 48,
           padding: "14px",
-          borderRadius: 10,
+          borderRadius: "var(--fl-radius-md)",
           border: "none",
-          background: "var(--color-primary)",
+          background: "var(--fl-color-primary)",
           color: "#fff",
-          fontSize: 15,
-          fontWeight: 700,
+          fontFamily: "var(--fl-font-jp)",
+          fontSize: "var(--fl-text-body)",
+          fontWeight: 800,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 4,
         }}
       >
-        {isUpdate ? `結果を更新（${count}本）` : `結果を見る（${count}本）`}
+        {isUpdate ? "結果を更新" : "結果を見る"}（<Num size="sm" color="#fff">{count}</Num>本）
       </button>
     </div>
   );

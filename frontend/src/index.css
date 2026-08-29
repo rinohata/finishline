@@ -1,17 +1,5 @@
 :root {
-  --color-bg: #fafafa;
-  --color-surface: #ffffff;
-  --color-border: #e2e2e2;
-  --color-text: #1a1a1a;
-  --color-text-muted: #6b6b6b;
-  --color-primary: #3b6ea5;
-  --color-primary-dark: #2d5580;
-  --color-accent: #d9534f;
-  --color-warn-bg: #fff4e5;
-  --color-warn-border: #f0c987;
-  --radius: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic",
-    sans-serif;
+  font-family: var(--fl-font-jp);
   color-scheme: light;
 }
 
@@ -23,8 +11,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--fl-color-bg);
+  color: var(--fl-color-text);
   min-width: 375px;
 }
 
@@ -32,7 +20,7 @@ body {
   max-width: 720px;
   margin: 0 auto;
   min-height: 100vh;
-  background: var(--color-surface);
+  background: var(--fl-color-surface);
   position: relative;
 }
 
@@ -46,39 +34,41 @@ button {
 }
 
 .section-title {
-  font-size: 15px;
-  font-weight: 700;
+  font-size: var(--fl-text-heading);
+  font-weight: 800;
   margin: 0 0 8px;
 }
 
 .muted {
-  color: var(--color-text-muted);
-  font-size: 13px;
+  color: var(--fl-color-text-muted);
+  font-size: var(--fl-text-body-sm);
 }
 
 .error-banner {
-  background: var(--color-warn-bg);
-  border: 1px solid var(--color-warn-border);
-  border-radius: var(--radius);
+  background: var(--fl-color-warning-tint);
+  border: 1px solid var(--fl-color-warning-border);
+  border-radius: var(--fl-radius-md);
   padding: 12px 14px;
   margin: 12px;
-  font-size: 14px;
+  font-size: var(--fl-text-body);
+  color: var(--fl-color-text-secondary);
 }
 
 .error-banner button {
   margin-top: 8px;
   padding: 8px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--color-primary);
-  background: var(--color-surface);
-  color: var(--color-primary);
-  font-size: 13px;
+  border-radius: var(--fl-radius-sm);
+  border: 1px solid var(--fl-color-primary);
+  background: var(--fl-color-surface);
+  color: var(--fl-color-primary);
+  font-size: var(--fl-text-body-sm);
+  font-weight: 700;
 }
 
 .loading {
   padding: 40px 16px;
   text-align: center;
-  color: var(--color-text-muted);
+  color: var(--fl-color-text-muted);
 }
 
 /* UI仕様書4.8: 人気順比較ブロック。基準幅375pxでは上下2段、480px以上で左右2列。 */

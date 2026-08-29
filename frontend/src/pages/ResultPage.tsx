@@ -21,7 +21,7 @@ export default function ResultPage() {
   // UI仕様書7章: 回答5本未満で結果画面に直接アクセス → 入力画面へリダイレクト
   useEffect(() => {
     if (count < 5) {
-      navigate("/", { replace: true });
+      navigate("/start", { replace: true });
     }
   }, [count, navigate]);
 
@@ -54,7 +54,7 @@ export default function ResultPage() {
       <div style={{ padding: "16px 12px 0" }}>
         <button
           type="button"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/start")}
           style={{
             border: "none",
             background: "none",

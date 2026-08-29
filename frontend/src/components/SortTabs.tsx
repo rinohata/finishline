@@ -23,14 +23,18 @@ export default function SortTabs({ value, onChange }: Props) {
             onClick={() => onChange(t.value)}
             style={{
               flex: t.value === "low_completion" ? 1.4 : 1,
+              minHeight: 40,
               padding: "8px 6px",
-              borderRadius: 8,
+              borderRadius: "var(--fl-radius-sm)",
               border:
-                value === t.value ? "1px solid var(--color-primary)" : "1px solid var(--color-border)",
-              background: value === t.value ? "#e8f0f9" : "var(--color-surface)",
-              color: value === t.value ? "var(--color-primary-dark)" : "var(--color-text)",
-              fontSize: 12.5,
-              fontWeight: 600,
+                value === t.value
+                  ? "1px solid var(--fl-color-primary)"
+                  : "1px solid var(--fl-color-border)",
+              background: value === t.value ? "var(--fl-color-primary-tint)" : "var(--fl-color-surface)",
+              color: value === t.value ? "var(--fl-color-primary-dark)" : "var(--fl-color-text-secondary)",
+              fontFamily: "var(--fl-font-jp)",
+              fontSize: "var(--fl-text-body-sm)",
+              fontWeight: 700,
             }}
           >
             {t.label}
@@ -38,7 +42,14 @@ export default function SortTabs({ value, onChange }: Props) {
         ))}
       </div>
       {value === "low_completion" && (
-        <p className="muted" style={{ padding: "6px 12px 0", margin: 0 }}>
+        <p
+          style={{
+            padding: "6px 12px 0",
+            margin: 0,
+            fontSize: "var(--fl-text-body-sm)",
+            color: "var(--fl-color-text-muted)",
+          }}
+        >
           途中で止まった作品は思い出しにくいもの。よく止まる作品を並べました。
         </p>
       )}

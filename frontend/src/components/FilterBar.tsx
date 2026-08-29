@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { useState } from "react";
 import { useGenreJp } from "../state/useGenreJp";
 
@@ -34,6 +35,30 @@ interface Props {
   onChange: (value: FilterState) => void;
 }
 
+const chipStyle = (active: boolean): CSSProperties => ({
+  flexShrink: 0,
+  minHeight: 32,
+  padding: "6px 12px",
+  borderRadius: "var(--fl-radius-pill)",
+  border: active ? "1px solid var(--fl-color-primary)" : "1px solid var(--fl-color-border)",
+  background: active ? "var(--fl-color-primary)" : "var(--fl-color-surface)",
+  color: active ? "#fff" : "var(--fl-color-text-secondary)",
+  fontFamily: "var(--fl-font-jp)",
+  fontSize: "var(--fl-text-body-sm)",
+  fontWeight: 700,
+});
+
+const optionStyle = (active: boolean): CSSProperties => ({
+  padding: "6px 10px",
+  borderRadius: "var(--fl-radius-sm)",
+  border: active ? "1px solid var(--fl-color-primary)" : "1px solid var(--fl-color-border)",
+  background: active ? "var(--fl-color-primary-tint)" : "var(--fl-color-surface)",
+  color: active ? "var(--fl-color-primary-dark)" : "var(--fl-color-text-secondary)",
+  fontFamily: "var(--fl-font-jp)",
+  fontSize: "var(--fl-text-body-sm)",
+  fontWeight: 600,
+});
+
 export default function FilterBar({ value, onChange }: Props) {
   const [open, setOpen] = useState<"year" | "genre" | "episodes" | null>(null);
   const { jp } = useGenreJp();
@@ -64,21 +89,7 @@ export default function FilterBar({ value, onChange }: Props) {
     <div style={{ padding: "8px 12px 0" }}>
       <div style={{ display: "flex", gap: 8, overflowX: "auto" }}>
         {(["year", "genre", "episodes"] as const).map((kind) => (
-          <button
-            key={kind}
-            type="button"
-            onClick={() => setOpen(open === kind ? null : kind)}
-            style={{
-              flexShrink: 0,
-              padding: "6px 12px",
-              borderRadius: 999,
-              border: "1px solid var(--color-border)",
-              background: open === kind ? "var(--color-primary)" : "var(--color-surface)",
-              color: open === kind ? "#fff" : "var(--color-text)",
-              fontSize: 12.5,
-              fontWeight: 600,
-            }}
-          >
+          <button key={kind} type="button" onClick={() => setOpen(open === kind ? null : kind)} style={chipStyle(open === kind)}>
             {chipLabel(kind)} ▾
           </button>
         ))}
@@ -88,12 +99,14 @@ export default function FilterBar({ value, onChange }: Props) {
             onClick={() => onChange({ genres: [] })}
             style={{
               flexShrink: 0,
+              minHeight: 32,
               padding: "6px 12px",
-              borderRadius: 999,
-              border: "1px solid var(--color-border)",
-              background: "var(--color-surface)",
-              fontSize: 12.5,
-              color: "var(--color-text-muted)",
+              borderRadius: "var(--fl-radius-pill)",
+              border: "1px solid var(--fl-color-border)",
+              background: "var(--fl-color-surface)",
+              fontFamily: "var(--fl-font-jp)",
+              fontSize: "var(--fl-text-body-sm)",
+              color: "var(--fl-color-text-muted)",
             }}
           >
             すべてクリア ×
@@ -111,14 +124,7 @@ export default function FilterBar({ value, onChange }: Props) {
                 onChange({ ...value, yearFrom: b.from, yearTo: b.to });
                 setOpen(null);
               }}
-              style={{
-                padding: "6px 10px",
-                borderRadius: 8,
-                border: "1px solid var(--color-border)",
-                background:
-                  value.yearFrom === b.from && value.yearTo === b.to ? "#e8f0f9" : "var(--color-surface)",
-                fontSize: 12.5,
-              }}
+              style={optionStyle(value.yearFrom === b.from && value.yearTo === b.to)}
             >
               {b.label}
             </button>
@@ -136,13 +142,7 @@ export default function FilterBar({ value, onChange }: Props) {
                 onChange({ ...value, episodesMax: b.max });
                 setOpen(null);
               }}
-              style={{
-                padding: "6px 10px",
-                borderRadius: 8,
-                border: "1px solid var(--color-border)",
-                background: value.episodesMax === b.max ? "#e8f0f9" : "var(--color-surface)",
-                fontSize: 12.5,
-              }}
+              style={optionStyle(value.episodesMax === b.max)}
             >
               {b.label}
             </button>
@@ -153,18 +153,7 @@ export default function FilterBar({ value, onChange }: Props) {
       {open === "genre" && (
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6, padding: "8px 0" }}>
           {GENRES.map((g) => (
-            <button
-              key={g}
-              type="button"
-              onClick={() => toggleGenre(g)}
-              style={{
-                padding: "6px 10px",
-                borderRadius: 8,
-                border: "1px solid var(--color-border)",
-                background: value.genres.includes(g) ? "#e8f0f9" : "var(--color-surface)",
-                fontSize: 12.5,
-              }}
-            >
+            <button key={g} type="button" onClick={() => toggleGenre(g)} style={optionStyle(value.genres.includes(g))}>
               {jp(g)}
             </button>
           ))}

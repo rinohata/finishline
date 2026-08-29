@@ -26,7 +26,7 @@ export default function ConfirmDialog({ message, confirmLabel, onConfirm, onCanc
       style={{
         position: "fixed",
         inset: 0,
-        background: "rgba(0,0,0,0.45)",
+        background: "rgba(15,23,42,0.5)",
         zIndex: 200,
         display: "flex",
         alignItems: "center",
@@ -37,14 +37,16 @@ export default function ConfirmDialog({ message, confirmLabel, onConfirm, onCanc
       <div
         onClick={(e) => e.stopPropagation()}
         style={{
-          background: "var(--color-surface)",
-          borderRadius: 14,
+          background: "var(--fl-color-surface)",
+          borderRadius: "var(--fl-radius-lg)",
+          boxShadow: "var(--fl-shadow-lg)",
           padding: "20px 18px",
           width: "100%",
           maxWidth: 320,
+          fontFamily: "var(--fl-font-jp)",
         }}
       >
-        <p style={{ margin: "0 0 16px", fontSize: 14.5, fontWeight: 600, textAlign: "center" }}>
+        <p style={{ margin: "0 0 16px", fontSize: "var(--fl-text-body)", fontWeight: 700, textAlign: "center" }}>
           {message}
         </p>
         <div style={{ display: "flex", gap: 8 }}>
@@ -53,13 +55,15 @@ export default function ConfirmDialog({ message, confirmLabel, onConfirm, onCanc
             onClick={onCancel}
             style={{
               flex: 1,
+              minHeight: 44,
               padding: "10px 0",
-              borderRadius: 8,
-              border: "1px solid var(--color-border)",
-              background: "var(--color-surface)",
-              color: "var(--color-text)",
-              fontSize: 13.5,
-              fontWeight: 600,
+              borderRadius: "var(--fl-radius-sm)",
+              border: "1px solid var(--fl-color-border)",
+              background: "var(--fl-color-surface)",
+              color: "var(--fl-color-text)",
+              fontFamily: "var(--fl-font-jp)",
+              fontSize: "var(--fl-text-body-sm)",
+              fontWeight: 700,
             }}
           >
             キャンセル
@@ -69,13 +73,15 @@ export default function ConfirmDialog({ message, confirmLabel, onConfirm, onCanc
             onClick={onConfirm}
             style={{
               flex: 1,
+              minHeight: 44,
               padding: "10px 0",
-              borderRadius: 8,
-              border: "1px solid var(--color-accent)",
-              background: "var(--color-accent)",
+              borderRadius: "var(--fl-radius-sm)",
+              border: "1px solid var(--fl-color-warning)",
+              background: "var(--fl-color-warning)",
               color: "#fff",
-              fontSize: 13.5,
-              fontWeight: 600,
+              fontFamily: "var(--fl-font-jp)",
+              fontSize: "var(--fl-text-body-sm)",
+              fontWeight: 700,
             }}
           >
             {confirmLabel}

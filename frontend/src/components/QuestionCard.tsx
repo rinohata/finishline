@@ -8,6 +8,24 @@ interface Props {
   onSelect: (label: Label) => void;
 }
 
+const CARD_CLASS: Record<Label, string> = {
+  loved: styles.selectedLoved,
+  completed: styles.selectedCompleted,
+  dropped: styles.selectedDropped,
+};
+
+const PILL_CLASS: Record<Label, string> = {
+  loved: styles.loved,
+  completed: styles.completed,
+  dropped: styles.dropped,
+};
+
+const PILL_TEXT: Record<Label, string> = {
+  loved: "♥ 好き",
+  completed: "✓ 完走",
+  dropped: "⏸ 途中",
+};
+
 /**
  * 作品カード。3ボタンは排他選択、再タップで解除。
  * 回答してもカードは消さない（押し間違いの修正を可能にするため / UI仕様書3.2）。
@@ -20,7 +38,8 @@ export default function QuestionCard({ item, label, onSelect }: Props) {
   const yearText = item.year ?? "年代不明";
 
   return (
-    <div className={`${styles.card} ${label ? styles.selected : ""}`}>
+    <div className={`${styles.card} ${label ? CARD_CLASS[label] : ""}`}>
+      {label && <span className={`${styles.statusPill} ${PILL_CLASS[label]}`}>{PILL_TEXT[label]}</span>}
       <p className={styles.title}>{item.title}</p>
       <p className={styles.meta}>
         {yearText} / {episodesText}

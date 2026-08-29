@@ -26,6 +26,21 @@
   --fl-color-success-tint: #e7f7ec;
   --fl-color-success-border: #bfe8cc;
 
+  /* ===== カラー: サブアクセント（入力画面の回答ボタン専用）
+   * 「好き」はピンク、「途中で止まった」はバイオレット。どちらも警告色（橙）や
+   * エラーを連想させる色ではなく、独立した個性を持つ色にする。特に「途中で
+   * 止まった」は完走予測の精度に最も効くデータ（PR-AUC寄与が最大）のため、
+   * 押しにくく・ネガティブに感じさせない彩度のある色を意図的に割り当てている。 */
+  --fl-color-pink: #ec4899;
+  --fl-color-pink-dark: #be185d;
+  --fl-color-pink-tint: #fdf2f8;
+  --fl-color-pink-border: #f9c1de;
+
+  --fl-color-violet: #7c3aed;
+  --fl-color-violet-dark: #5b21b6;
+  --fl-color-violet-tint: #f4f0fe;
+  --fl-color-violet-border: #d9c8fb;
+
   /* ===== カラー: 背景・サーフェス ===== */
   --fl-color-bg: #f4f7fc;
   --fl-color-surface: #ffffff;
