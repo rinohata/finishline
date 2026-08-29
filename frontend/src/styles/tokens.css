@@ -1,0 +1,97 @@
+/**
+ * デザイントークン（docs/design_guidelines.md 参照）。
+ *
+ * 既存の index.css の :root（--color-*）とは意図的に名前空間を分けている
+ * （プレフィックス --fl-）。理由: 段階的にコンポーネントを移行する方針のため、
+ * ここで値を変えても未移行の画面が巻き添えで見た目を変えないようにするため。
+ * 画面ごとの移行が完了し index.css の旧トークンの参照がゼロになったら、
+ * 旧トークンとこのファイルの重複コメントを削除して一本化すること。
+ */
+
+:root {
+  /* ===== カラー: プライマリ（青系・信頼感） ===== */
+  --fl-color-primary: #2563eb;
+  --fl-color-primary-dark: #1d4ed8;
+  --fl-color-primary-tint: #eaf1fe; /* 背景に敷く淡い青。カード装飾用（数値の背景には使わない） */
+
+  /* ===== カラー: 注意色（at_riskはエラーではなく注意。赤より橙寄り） ===== */
+  --fl-color-warning: #f59e0b;
+  --fl-color-warning-dark: #b45309;
+  --fl-color-warning-tint: #fef3e2;
+  --fl-color-warning-border: #fcd9a8;
+
+  /* ===== カラー: 成功色（will_complete・ポジティブな数値） ===== */
+  --fl-color-success: #16a34a;
+  --fl-color-success-dark: #15803d;
+  --fl-color-success-tint: #e7f7ec;
+  --fl-color-success-border: #bfe8cc;
+
+  /* ===== カラー: 背景・サーフェス ===== */
+  --fl-color-bg: #f4f7fc;
+  --fl-color-surface: #ffffff;
+  --fl-color-surface-alt: #f8fafd; /* カード内の入れ子背景 */
+  --fl-color-border: #e3e8f0;
+
+  /* ===== カラー: テキスト（主・副・淡） ===== */
+  --fl-color-text: #14203b;
+  --fl-color-text-secondary: #47536b;
+  --fl-color-text-muted: #7c869b;
+  --fl-color-text-on-primary: #ffffff;
+
+  /* ===== フォント =====
+   * 日本語（見出し・本文・UI）: M PLUS 1p
+   *   丸みがありつつ子供っぽくならない、診断/クイズ系コンテンツで定番のフォント。
+   *   Noto Sans JPよりも個性があり「テンプレ感」を避けられる（選定理由の詳細は
+   *   design_guidelines.md）。
+   * 数値専用: Inter（tabular-nums指定必須）
+   *   完走率・倍率・話数など「硬派に見せたい数字」はすべてこのフォントを使う。
+   *   本文の丸みのある書体とはっきり対比させることで、パッケージのカラフルさとは
+   *   独立して数字の信頼性を担保する。
+   */
+  --fl-font-jp: "M PLUS 1p", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --fl-font-numeric: "Inter", "M PLUS 1p", sans-serif;
+
+  /* ===== タイポグラフィスケール ===== */
+  --fl-text-display: 26px;   /* タイプ名など、カードの主役級見出し */
+  --fl-text-heading: 16px;   /* section-title相当 */
+  --fl-text-body: 14px;
+  --fl-text-body-sm: 12.5px;
+  --fl-text-caption: 11px;
+
+  --fl-numeric-xl: 34px;     /* メインの完走率など、最大の数字 */
+  --fl-numeric-lg: 22px;
+  --fl-numeric-md: 16px;
+  --fl-numeric-sm: 13px;     /* 文中に埋め込む数字（倍率など） */
+
+  /* ===== 角丸 ===== */
+  --fl-radius-sm: 8px;
+  --fl-radius-md: 12px;
+  --fl-radius-lg: 18px;
+  --fl-radius-pill: 999px;
+
+  /* ===== 影 ===== */
+  --fl-shadow-sm: 0 1px 2px rgba(20, 32, 59, 0.06);
+  --fl-shadow-md: 0 6px 16px rgba(20, 32, 59, 0.08);
+  --fl-shadow-lg: 0 12px 32px rgba(20, 32, 59, 0.12);
+
+  /* ===== 余白スケール（4px基準） ===== */
+  --fl-space-1: 4px;
+  --fl-space-2: 8px;
+  --fl-space-3: 12px;
+  --fl-space-4: 16px;
+  --fl-space-5: 20px;
+  --fl-space-6: 24px;
+  --fl-space-7: 32px;
+  --fl-space-8: 40px;
+}
+
+/* 数値表示の共通クラス。tabular-numsで桁が動いても揃うようにする。
+   「装飾しない」の実装ルール: グラデーション背景・斜体・カラフルな縁取りは
+   このクラスに一切持たせないこと（design_guidelines.md 参照）。 */
+.fl-numeric {
+  font-family: var(--fl-font-numeric);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  color: var(--fl-color-text);
+  font-weight: 700;
+}
