@@ -83,9 +83,15 @@ export interface WillCompleteItem {
   reason: string;
 }
 
+export interface BaselineItem {
+  anime_id: number;
+  title: string;
+  is_at_risk: boolean;
+}
+
 export interface BaselineComparison {
-  popular_top20: number[];
-  personalized_top20: number[];
+  popular: BaselineItem[];
+  personalized: BaselineItem[];
   overlap: number;
 }
 

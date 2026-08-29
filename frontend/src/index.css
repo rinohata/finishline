@@ -80,3 +80,20 @@ button {
   text-align: center;
   color: var(--color-text-muted);
 }
+
+/* UI仕様書4.8: 人気順比較ブロック。基準幅375pxでは上下2段、480px以上で左右2列。 */
+.baseline-comparison-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 480px) {
+  .baseline-comparison-columns {
+    flex-direction: row;
+  }
+  .baseline-comparison-columns > div {
+    flex: 1;
+    min-width: 0;
+  }
+}

@@ -31,6 +31,11 @@ export interface QuestionsParams {
   offset?: number;
 }
 
+/** 英語ジャンル名 -> 日本語表記の対応表（api/services/genres.py が唯一の翻訳表）。 */
+export function fetchGenres(): Promise<Record<string, string>> {
+  return request<Record<string, string>>("/genres");
+}
+
 export function fetchQuestions(params: QuestionsParams): Promise<QuestionsResponse> {
   const search = new URLSearchParams();
   if (params.q) search.set("q", params.q);

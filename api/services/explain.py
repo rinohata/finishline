@@ -6,31 +6,8 @@ predict.py から分離: 「何を予測するか」と「なぜそう予測し�
 
 from api.ml.inference import UserProfileVectors, cos_sim
 from api.services.data_store import DataStore
+from api.services.genres import jp as _jp
 from api.services.profile import Response, bucket_index_for_episodes
-
-# anime.csv の Genres 列（英語表記）に対する日本語対応表。全43種を網羅する
-# （store.all_genres は anime.csv の全ジャンルから構築されるため、理由文に出しうる
-# ジャンルはこの43種に限られる）。英語のまま出ると日本語の理由文中で表記が浮くため、
-# 未知のジャンルが増えたときは _jp() のフォールバック（英語そのまま返す）に頼らず
-# ここに追記すること。
-GENRE_JP = {
-    "Action": "アクション", "Adventure": "アドベンチャー", "Cars": "カーレース",
-    "Comedy": "コメディ", "Dementia": "異色", "Demons": "悪魔", "Drama": "ドラマ",
-    "Ecchi": "エッチ", "Fantasy": "ファンタジー", "Game": "ゲーム", "Harem": "ハーレム",
-    "Hentai": "成人向け", "Historical": "歴史", "Horror": "ホラー", "Josei": "女性向け",
-    "Kids": "子供向け", "Magic": "魔法", "Martial Arts": "格闘", "Mecha": "メカ",
-    "Military": "ミリタリー", "Music": "音楽", "Mystery": "ミステリー", "Parody": "パロディ",
-    "Police": "刑事", "Psychological": "心理", "Romance": "恋愛", "Samurai": "時代劇",
-    "School": "学園", "Sci-Fi": "SF", "Seinen": "青年向け", "Shoujo": "少女向け",
-    "Shoujo Ai": "百合(ソフト)", "Shounen": "少年向け", "Shounen Ai": "BL(ソフト)",
-    "Slice of Life": "日常系", "Space": "宇宙", "Sports": "スポーツ", "Super Power": "超能力",
-    "Supernatural": "超自然", "Thriller": "スリラー", "Vampire": "ヴァンパイア", "Yaoi": "BL",
-    "Yuri": "百合",
-}
-
-
-def _jp(genre: str) -> str:
-    return GENRE_JP.get(genre, genre)
 
 
 GENRE_REASON_MIN_COUNT = 3
@@ -43,7 +20,7 @@ GENRE_REASON_MIN_COUNT = 3
 DISPLAYED_GENRE_COUNT = 2
 
 
-def _displayed_genre_hits(store: DataStore, profile: UserProfileVectors, anime_id: int) -> list[tuple[str, float]]:
+def displayed_genre_hits(store: DataStore, profile: UserProfileVectors, anime_id: int) -> list[tuple[str, float]]:
     """表示される先頭DISPLAYED_GENRE_COUNT件のジャンルのうち、理由として使えるものを返す。
 
     「使える」= genre_rateに値があり、かつ回答本数がGENRE_REASON_MIN_COUNT以上
@@ -73,7 +50,7 @@ def build_reasons(store: DataStore, profile: UserProfileVectors, anime_id: int, 
             "text": f"全{episodes}話。あなたが完走しやすいのは{best['range']}です",
         })
 
-    genre_hits = _displayed_genre_hits(store, profile, anime_id)
+    genre_hits = displayed_genre_hits(store, profile, anime_id)
     if genre_hits:
         g, rate = min(genre_hits, key=lambda x: x[1])
         reasons.append({
@@ -116,7 +93,7 @@ def build_will_complete_reason(
     if population_completion_rate < 0.6 and completion_prob - population_completion_rate > 0.15:
         return "一般には完走されにくいですが、あなたの傾向なら見切れそうです"
 
-    genre_hits = _displayed_genre_hits(store, profile, anime_id)
+    genre_hits = displayed_genre_hits(store, profile, anime_id)
     if genre_hits:
         g, rate = max(genre_hits, key=lambda x: x[1])
         return f"{_jp(g)}の完走実績があります"

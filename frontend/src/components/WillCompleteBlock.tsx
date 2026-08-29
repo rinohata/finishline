@@ -1,5 +1,6 @@
 import type { WillCompleteItem } from "../api/types";
 import { pct } from "../lib/format";
+import { useGenreJp } from "../state/useGenreJp";
 
 interface Props {
   items: WillCompleteItem[];
@@ -7,6 +8,7 @@ interface Props {
 
 /** [C] ブロック4: 完走できる作品（UI仕様書4.6）。10件表示、理由は1行。 */
 export default function WillCompleteBlock({ items }: Props) {
+  const { jp } = useGenreJp();
   if (items.length === 0) return null;
 
   return (
@@ -31,7 +33,7 @@ export default function WillCompleteBlock({ items }: Props) {
             </p>
             <p className="muted" style={{ margin: "2px 0 0" }}>
               {item.year ?? "―"} / {item.episodes ? `全${item.episodes}話` : "話数不明"}
-              {item.genres.length > 0 ? ` / ${item.genres.slice(0, 2).join("・")}` : ""}
+              {item.genres.length > 0 ? ` / ${item.genres.slice(0, 2).map(jp).join("・")}` : ""}
             </p>
             <p className="muted" style={{ margin: "2px 0 0" }}>└ {item.reason}</p>
           </li>

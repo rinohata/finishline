@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useGenreJp } from "../state/useGenreJp";
 
 const GENRES = [
   "Action", "Adventure", "Comedy", "Drama", "Fantasy", "Sci-Fi",
@@ -35,6 +36,7 @@ interface Props {
 
 export default function FilterBar({ value, onChange }: Props) {
   const [open, setOpen] = useState<"year" | "genre" | "episodes" | null>(null);
+  const { jp } = useGenreJp();
 
   const toggleGenre = (g: string) => {
     const next = value.genres.includes(g)
@@ -163,7 +165,7 @@ export default function FilterBar({ value, onChange }: Props) {
                 fontSize: 12.5,
               }}
             >
-              {g}
+              {jp(g)}
             </button>
           ))}
         </div>

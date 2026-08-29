@@ -66,9 +66,15 @@ class WillCompleteItem(BaseModel):
     reason: str
 
 
+class BaselineItem(BaseModel):
+    anime_id: int
+    title: str
+    is_at_risk: bool
+
+
 class BaselineComparison(BaseModel):
-    popular_top20: list[int]
-    personalized_top20: list[int]
+    popular: list[BaselineItem]
+    personalized: list[BaselineItem]
     overlap: int
 
 

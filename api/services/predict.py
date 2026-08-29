@@ -8,6 +8,7 @@ UIに渡す直前に変換する。離脱確率そのものは一切レスポン
 from api.ml.inference import build_profile_vectors, predict_dropped_prob
 from api.services import explain
 from api.services.data_store import DataStore
+from api.services.genres import jp as _jp
 from api.services.profile import (
     EPISODE_BUCKET_DEFS,
     Response,
@@ -279,6 +280,22 @@ def build_predict_response(store: DataStore, raw_responses: list[dict]) -> dict:
     personalized_top20 = [aid for aid, _ in wide_scored[:20]]
     overlap = len(set(popular_top20) & set(personalized_top20))
 
+    # UI仕様書4.8: 人気順トップ20とあなた向けトップ20を並べて、重なりの少なさを見せる。
+    # 「続きにくい予測」の警告マークは at_risk と同じ絶対しきい値で判定する
+    # （どちらのリストの作品でも、この人にとっての予測完走率が低ければ付く）。
+    wide_prob_by_id = dict(wide_scored)
+
+    def _baseline_item(aid: int) -> dict:
+        prob = wide_prob_by_id.get(aid, 0.0)
+        return {
+            "anime_id": aid,
+            "title": store.title(aid) or "",
+            "is_at_risk": prob < AT_RISK_ABSOLUTE_THRESHOLD,
+        }
+
+    popular_items = [_baseline_item(aid) for aid in popular_top20]
+    personalized_items = [_baseline_item(aid) for aid in personalized_top20]
+
     # will_complete: 予測完走率の降順だけでソートすると、1話の映画・OVA（定義上ほぼ100%完走）が
     # 上位を独占し推薦として意味をなさなくなる問題への対応（2026-08修正）。
     # 修正1: Type(映画/音楽/特番)・話数・登録者数・スコアで候補を絞る
@@ -339,8 +356,8 @@ def build_predict_response(store: DataStore, raw_responses: list[dict]) -> dict:
         "at_risk_threshold": AT_RISK_ABSOLUTE_THRESHOLD,
         "will_complete": will_complete,
         "baseline_comparison": {
-            "popular_top20": popular_top20,
-            "personalized_top20": personalized_top20,
+            "popular": popular_items,
+            "personalized": personalized_items,
             "overlap": overlap,
         },
     }
@@ -380,6 +397,7 @@ def build_predict_single_response(store: DataStore, raw_responses: list[dict], t
 
     negative, positive = [], []
     episodes = store.episodes(target_anime_id)
+    a_genres = store.genres(target_anime_id)
     best_bucket = profile_vectors.best_episode_bucket
     if episodes is not None and best_bucket is not None:
         if bucket_index_for_episodes(episodes) > best_bucket["index"]:
@@ -392,12 +410,14 @@ def build_predict_single_response(store: DataStore, raw_responses: list[dict], t
                 "type": "episode_bucket",
                 "text": f"全{episodes}話は、あなたが完走しやすい話数レンジ内です",
             })
-    a_genres = store.genres(target_anime_id)
-    genre_hits = [(g, profile_vectors.genre_rate[g]) for g in a_genres if g in profile_vectors.genre_rate]
+    # 分母が薄いジャンル（回答本数が少なく統計的に無意味な完走率0%/100%等）を根拠に
+    # しないよう、at_risk/will_completeと同じ displayed_genre_hits を使う
+    # （表示先頭2ジャンル・回答3本以上のみ）。
+    genre_hits = explain.displayed_genre_hits(store, profile_vectors, target_anime_id)
     if genre_hits:
         g, rate = min(genre_hits, key=lambda x: x[1])
         (negative if rate < 0.5 else positive).append({
-            "type": "genre", "text": f"{g}のあなたの完走率は{rate*100:.0f}%",
+            "type": "genre", "text": f"{_jp(g)}のあなたの完走率は{rate*100:.0f}%",
         })
 
     if not insufficient_data:

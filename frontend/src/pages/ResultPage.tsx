@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { postPredict } from "../api/client";
 import type { PredictResponse } from "../api/types";
 import AtRiskBlock from "../components/AtRiskBlock";
+import BaselineComparisonBlock from "../components/BaselineComparisonBlock";
 import DropoutCurveChart from "../components/DropoutCurveChart";
 import SingleJudgmentBlock from "../components/SingleJudgmentBlock";
 import TypeDiagnosisCard from "../components/TypeDiagnosisCard";
@@ -99,6 +100,8 @@ export default function ResultPage() {
           <WillCompleteBlock items={data.will_complete} />
           {/* ブロック5: 脱落曲線グラフ */}
           <DropoutCurveChart curve={data.profile.curve} />
+          {/* ブロック6: 人気順との比較 */}
+          <BaselineComparisonBlock data={data.baseline_comparison} />
         </>
       )}
     </div>

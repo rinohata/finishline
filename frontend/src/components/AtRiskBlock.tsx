@@ -1,5 +1,6 @@
 import type { AtRiskItem } from "../api/types";
 import { pct, relativeRiskText } from "../lib/format";
+import { useGenreJp } from "../state/useGenreJp";
 import RateBar from "./RateBar";
 
 interface Props {
@@ -8,6 +9,7 @@ interface Props {
 
 /** [C] ブロック3: 話題作だけど続かないかも（本体, UI仕様書4.5）。 */
 export default function AtRiskBlock({ items }: Props) {
+  const { jp } = useGenreJp();
   return (
     <div style={{ margin: "16px 12px" }}>
       <p className="section-title">話題作だけど、あなたには続かないかも</p>
@@ -31,7 +33,7 @@ export default function AtRiskBlock({ items }: Props) {
           <p style={{ fontWeight: 800, fontSize: 15, margin: "0 0 4px" }}>{item.title}</p>
           <p className="muted" style={{ margin: "0 0 2px" }}>
             {item.year ?? "―"} / {item.episodes ? `全${item.episodes}話` : "話数不明"}
-            {item.genres.length > 0 ? ` / ${item.genres.slice(0, 2).join("・")}` : ""}
+            {item.genres.length > 0 ? ` / ${item.genres.slice(0, 2).map(jp).join("・")}` : ""}
           </p>
           {item.popularity_rank != null && (
             <p className="muted" style={{ margin: "0 0 10px" }}>

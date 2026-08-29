@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { postPredictSingle } from "../api/client";
 import { isAlreadyAnswered, type PredictSingleResult, type ResponseInput } from "../api/types";
 import { pct, relativeRiskText } from "../lib/format";
+import { useGenreJp } from "../state/useGenreJp";
 import { ConfidenceBadge, EstimatedNote } from "./Badges";
 import RateBar from "./RateBar";
 import SingleAnimeDropoutCurve from "./SingleAnimeDropoutCurve";
@@ -25,6 +26,7 @@ const RESULT_LABEL_JP: Record<string, string> = { completed: "完走", dropped: 
 
 /** [D] 単体判定画面全体（UI仕様書5章）。モーダル表示。 */
 export default function SingleJudgmentModal({ animeId, responses, onClose }: Props) {
+  const { jp } = useGenreJp();
   const [result, setResult] = useState<PredictSingleResult | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -170,7 +172,7 @@ export default function SingleJudgmentModal({ animeId, responses, onClose }: Pro
                 <p className="section-title">あなたの実績（条件が近い作品）</p>
                 {result.evidence.map((e, i) => (
                   <p key={i} style={{ fontSize: 13, margin: "4px 0" }}>
-                    {e.title}　全{e.episodes ?? "?"}話・{e.genre ?? "―"}　→{" "}
+                    {e.title}　全{e.episodes ?? "?"}話・{e.genre ? jp(e.genre) : "―"}　→{" "}
                     {RESULT_LABEL_JP[e.result] ?? e.result}
                   </p>
                 ))}

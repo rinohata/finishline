@@ -12,6 +12,7 @@ from api.schemas.predict_single import AlreadyAnsweredResponse, PredictSingleReq
 from api.schemas.questions import QuestionsResponse
 from api.services import feedback_store, predict, search
 from api.services.data_store import get_store
+from api.services.genres import GENRE_JP
 
 app = FastAPI(title="FinishLine API")
 
@@ -19,6 +20,13 @@ app = FastAPI(title="FinishLine API")
 @app.on_event("startup")
 def _warm_up() -> None:
     get_store()  # 起動時に一度だけロードしてキャッシュする
+
+
+@app.get("/genres", response_model=dict[str, str])
+def get_genres() -> dict[str, str]:
+    """英語ジャンル名 -> 日本語表記の対応表。フロント側の表示・絞り込み選択肢の
+    日本語化に使う（api/services/genres.py が唯一の翻訳表）。"""
+    return GENRE_JP
 
 
 @app.get("/questions", response_model=QuestionsResponse)

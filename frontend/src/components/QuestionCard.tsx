@@ -1,4 +1,5 @@
 import type { Label, QuestionItem } from "../api/types";
+import { useGenreJp } from "../state/useGenreJp";
 import styles from "./QuestionCard.module.css";
 
 interface Props {
@@ -13,7 +14,8 @@ interface Props {
  * MALの画像は使わない。
  */
 export default function QuestionCard({ item, label, onSelect }: Props) {
-  const genreText = item.genres.slice(0, 2).join("・");
+  const { jp } = useGenreJp();
+  const genreText = item.genres.slice(0, 2).map(jp).join("・");
   const episodesText = item.episodes ? `全${item.episodes}話` : "話数不明";
   const yearText = item.year ?? "年代不明";
 

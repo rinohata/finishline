@@ -1,4 +1,5 @@
 import type { ProfileOut } from "../api/types";
+import { useGenreJp } from "../state/useGenreJp";
 
 interface Props {
   profile: ProfileOut;
@@ -6,6 +7,7 @@ interface Props {
 
 /** [C] ブロック2: タイプ診断カード（UI仕様書4.4）。 */
 export default function TypeDiagnosisCard({ profile }: Props) {
+  const { jp } = useGenreJp();
   const pct = (v: number | null) => (v == null ? "―" : `${Math.round(v * 100)}%`);
 
   return (
@@ -79,11 +81,11 @@ export default function TypeDiagnosisCard({ profile }: Props) {
       <div style={{ textAlign: "left", fontSize: 13, lineHeight: 1.8 }}>
         <p style={{ margin: "4px 0" }}>
           <strong>好む傾向</strong>{" "}
-          {profile.preferred_genres.length ? profile.preferred_genres.join(" / ") : "―"}
+          {profile.preferred_genres.length ? profile.preferred_genres.map(jp).join(" / ") : "―"}
         </p>
         <p style={{ margin: "4px 0" }}>
           <strong>避ける傾向</strong>{" "}
-          {profile.avoided_genres.length ? profile.avoided_genres.join(" / ") : "―"}
+          {profile.avoided_genres.length ? profile.avoided_genres.map(jp).join(" / ") : "―"}
         </p>
       </div>
     </div>
