@@ -200,7 +200,7 @@ def _select_diverse_will_complete(scored: list[tuple[int, float]], store: DataSt
 
 
 def _build_curve(store: DataStore, responses: list[Response]) -> list[dict]:
-    """ユーザー自身の回答を話数レンジ4バケット固定で区切り、累積完走率を全体平均と比較する。
+    """ユーザー自身の回答を話数レンジ3バケット固定で区切り、累積完走率を全体平均と比較する。
 
     以前は実測話数（11, 12, 24, 25, 358話など）をそのままX軸にしていたため、
     値が不規則でラベルが重なって読めなかった。EPISODE_BUCKET_DEFS の上限を

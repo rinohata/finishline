@@ -22,7 +22,7 @@ export default function DropoutCurveChart({ curve }: Props) {
     );
   }
 
-  // X軸は実測話数ではなく固定4バケット（EPISODE_BUCKET_DEFS）のインデックスで等間隔に並べる。
+  // X軸は実測話数ではなく固定バケット（EPISODE_BUCKET_DEFS）のインデックスで等間隔に並べる。
   // 実測話数（11, 12, 24, 25, 358話など）だとラベルが不規則に密集・重複するため。
   const sorted = curve;
   const plotW = WIDTH - PAD_L - PAD_R;

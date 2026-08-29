@@ -360,12 +360,6 @@ def main() -> None:
     model_card = {
         "target": "label_dropped (定義A: MAL離脱=4のみ、保留(3)は学習から除外)",
         "performance": {
-            "description": "data/raw・data/processed 消失後の全面再構築（scripts/build_lookups.py + "
-                            "scripts/train_model.py）による再学習。分割・特徴量エンジニアリングはSEED=42・"
-                            "N_USERS_TARGET=15,000（notebooks/02_model.ipynb と同一パラメータ）で再現しており、"
-                            "trained_on_users（学習に使えるデータを持っていたユーザー数）は偶然ではなく"
-                            "再構築前の値（10,004）と完全一致した。既存モデルとの数値的な再現は狙っていなかったが、"
-                            "結果としてAUC/PR-AUCも同水準（0.837台/0.32台）に戻っている。",
             "test_auc": round(float(test_auc), 4),
             "test_pr_auc": round(float(test_pr_auc), 4),
             "test_baseline_pos_rate": round(float(test_baseline_pos_rate), 4),
@@ -373,10 +367,11 @@ def main() -> None:
         "feature_columns": feature_columns,
         "trained_on_users": train_n_used,
         "n_tiers_pooled": N_TIERS,
-        "rebuild": {
-            "description": "data/raw と data/processed が誤って削除された後の復元作業。"
-                            ".gitignore対象の生成物のみで生成コードをコミットしていなかったことが原因のため、"
-                            "以後は scripts/build_lookups.py と scripts/train_model.py を必ずコミットする。",
+        "training_run": {
+            "description": "scripts/build_lookups.py と scripts/train_model.py で再現可能な学習実行の記録。"
+                            "data/question_pool.json・api/services/profile.py の EPISODE_BUCKET_DEFS・"
+                            "data/processed/ の内容など、実行時点の入力次第で数値は変わりうる"
+                            "（何が変わったかは reports/ 配下の該当レポートを参照）。",
             "date": time.strftime("%Y-%m-%d"),
             "seed": SEED,
             "n_users_sampled": len(all_user_ids),

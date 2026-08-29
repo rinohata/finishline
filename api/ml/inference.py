@@ -95,9 +95,10 @@ def build_candidate_features(store: DataStore, profile: UserProfileVectors, anim
     cos_d = cos_sim(a_emb, profile.dropped_vector)
 
     # episode_gap（候補話数 − 耐久話数のスカラー差）は、耐久話数が外れ値に弱いため廃止。
-    # 話数レンジバケット（〜13/14〜26/27〜50/51話〜）ベースの2特徴量に置き換えた
-    # （2026-08 再学習, reports/retrain_episode_bucket.md）。学習時と同じ定義:
-    # 該当バケットの本数が3本未満ならNaN（LightGBMに委ねる）。
+    # 話数レンジバケット（EPISODE_BUCKET_DEFS、api/services/profile.py）ベースの2特徴量に
+    # 置き換えた（2026-08 再学習, reports/retrain_episode_bucket.md。バケット構成は当初
+    # 4分割だったが同月中に3分割へ再修正, reports/question_pool_episode_rebalance.md）。
+    # 学習時と同じ定義: 該当バケットの本数が3本未満ならNaN（LightGBMに委ねる）。
     cand_bucket_idx = bucket_index_for_episodes(int(a_episodes)) if a_episodes is not None else None
     if cand_bucket_idx is not None and cand_bucket_idx < len(profile.episode_buckets):
         b = profile.episode_buckets[cand_bucket_idx]

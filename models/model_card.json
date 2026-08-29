@@ -1,10 +1,9 @@
 {
   "target": "label_dropped (定義A: MAL離脱=4のみ、保留(3)は学習から除外)",
   "performance": {
-    "description": "data/raw・data/processed 消失後の全面再構築（scripts/build_lookups.py + scripts/train_model.py）による再学習。分割・特徴量エンジニアリングはSEED=42・N_USERS_TARGET=15,000（notebooks/02_model.ipynb と同一パラメータ）で再現しており、trained_on_users（学習に使えるデータを持っていたユーザー数）は偶然ではなく再構築前の値（10,004）と完全一致した。既存モデルとの数値的な再現は狙っていなかったが、結果としてAUC/PR-AUCも同水準（0.837台/0.32台）に戻っている。",
-    "test_auc": 0.8378,
-    "test_pr_auc": 0.3291,
-    "test_baseline_pos_rate": 0.0556
+    "test_auc": 0.8322,
+    "test_pr_auc": 0.3147,
+    "test_baseline_pos_rate": 0.0557
   },
   "feature_columns": [
     "anime_avg_completion_rate_A",
@@ -66,7 +65,7 @@
     "cos_completed",
     "cos_dropped"
   ],
-  "trained_on_users": 10004,
+  "trained_on_users": 9991,
   "n_tiers_pooled": [
     3,
     5,
@@ -74,9 +73,9 @@
     20,
     30
   ],
-  "rebuild": {
-    "description": "data/raw と data/processed が誤って削除された後の復元作業。.gitignore対象の生成物のみで生成コードをコミットしていなかったことが原因のため、以後は scripts/build_lookups.py と scripts/train_model.py を必ずコミットする。",
-    "date": "2026-08-28",
+  "training_run": {
+    "description": "scripts/build_lookups.py と scripts/train_model.py で再現可能な学習実行の記録。data/question_pool.json・api/services/profile.py の EPISODE_BUCKET_DEFS・data/processed/ の内容など、実行時点の入力次第で数値は変わりうる（何が変わったかは reports/ 配下の該当レポートを参照）。",
+    "date": "2026-08-29",
     "seed": 42,
     "n_users_sampled": 15000
   }
