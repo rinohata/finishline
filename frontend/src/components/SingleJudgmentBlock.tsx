@@ -7,7 +7,7 @@ interface Props {
   responses: ResponseInput[];
 }
 
-/** [C] ブロック1: 単体判定の入力欄。最上部にsticky固定（UI仕様書4.3）。 */
+/** [C] ブロック1: 単体判定の入力欄。最上部にsticky固定(UI仕様書4.3)。 */
 export default function SingleJudgmentBlock({ responses }: Props) {
   const [value, setValue] = useState("");
   const [candidates, setCandidates] = useState<QuestionItem[]>([]);
@@ -44,12 +44,21 @@ export default function SingleJudgmentBlock({ responses }: Props) {
           position: "sticky",
           top: 0,
           zIndex: 20,
-          background: "var(--color-surface)",
-          borderBottom: "1px solid var(--color-border)",
+          background: "var(--fl-color-surface)",
+          borderBottom: "1px solid var(--fl-color-border)",
           padding: "10px 12px",
         }}
       >
-        <p style={{ fontSize: 13, fontWeight: 700, margin: "0 0 6px" }}>この作品、あなたは完走できる？</p>
+        <p
+          style={{
+            fontSize: "var(--fl-text-body-sm)",
+            fontWeight: 700,
+            margin: "0 0 6px",
+            fontFamily: "var(--fl-font-jp)",
+          }}
+        >
+          この作品、あなたは完走できる？
+        </p>
         <div style={{ position: "relative" }}>
           <input
             value={value}
@@ -58,9 +67,10 @@ export default function SingleJudgmentBlock({ responses }: Props) {
             style={{
               width: "100%",
               padding: "10px 12px",
-              borderRadius: 8,
-              border: "1px solid var(--color-border)",
-              fontSize: 14,
+              borderRadius: "var(--fl-radius-sm)",
+              border: "1px solid var(--fl-color-border)",
+              fontSize: "var(--fl-text-body)",
+              fontFamily: "var(--fl-font-jp)",
             }}
           />
           {candidates.length > 0 && (
@@ -69,12 +79,12 @@ export default function SingleJudgmentBlock({ responses }: Props) {
                 position: "absolute",
                 left: 0,
                 right: 0,
-                border: "1px solid var(--color-border)",
-                borderRadius: 8,
+                border: "1px solid var(--fl-color-border)",
+                borderRadius: "var(--fl-radius-sm)",
                 marginTop: 4,
                 overflow: "hidden",
-                background: "var(--color-surface)",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+                background: "var(--fl-color-surface)",
+                boxShadow: "var(--fl-shadow-md)",
               }}
             >
               {candidates.map((c) => (
@@ -88,20 +98,21 @@ export default function SingleJudgmentBlock({ responses }: Props) {
                     textAlign: "left",
                     padding: "8px 10px",
                     border: "none",
-                    borderBottom: "1px solid var(--color-border)",
-                    background: "var(--color-surface)",
-                    fontSize: 13,
+                    borderBottom: "1px solid var(--fl-color-border)",
+                    background: "var(--fl-color-surface)",
+                    fontSize: "var(--fl-text-body-sm)",
+                    fontFamily: "var(--fl-font-jp)",
                   }}
                 >
                   {c.title}
-                  <span className="muted"> {c.year ? `(${c.year})` : ""}</span>
+                  <span style={{ color: "var(--fl-color-text-muted)" }}> {c.year ? `(${c.year})` : ""}</span>
                 </button>
               ))}
             </div>
           )}
         </div>
         {searched && candidates.length === 0 && value.trim().length >= 2 && (
-          <p className="muted" style={{ marginTop: 4 }}>
+          <p style={{ marginTop: 4, fontSize: "var(--fl-text-body-sm)", color: "var(--fl-color-text-muted)" }}>
             該当する作品が見つかりませんでした。2020年までの作品が対象です。
           </p>
         )}

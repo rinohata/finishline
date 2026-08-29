@@ -1,4 +1,5 @@
 import type { Confidence } from "../api/types";
+import { InfoIcon } from "./icons";
 
 const CONFIDENCE_LABEL: Record<Confidence, string> = {
   high: "信頼度：高",
@@ -11,13 +12,14 @@ export function ConfidenceBadge({ confidence }: { confidence: Confidence }) {
   return (
     <span
       style={{
-        fontSize: 12,
+        fontSize: "var(--fl-text-caption)",
         fontWeight: 700,
-        padding: "3px 8px",
-        borderRadius: 999,
-        background: warn ? "#fff4e5" : "#eef2f5",
-        color: warn ? "#a3690b" : "var(--color-text-muted)",
-        border: warn ? "1px solid #f0c987" : "1px solid var(--color-border)",
+        padding: "3px 10px",
+        borderRadius: "var(--fl-radius-pill)",
+        fontFamily: "var(--fl-font-jp)",
+        background: warn ? "var(--fl-color-warning-tint)" : "var(--fl-color-surface-alt)",
+        color: warn ? "var(--fl-color-warning-dark)" : "var(--fl-color-text-muted)",
+        border: warn ? "1px solid var(--fl-color-warning-border)" : "1px solid var(--fl-color-border)",
       }}
     >
       {CONFIDENCE_LABEL[confidence]}
@@ -33,15 +35,22 @@ export function EstimatedNote({ isEstimated, isOngoing }: { isEstimated: boolean
   return (
     <p
       style={{
-        fontSize: 12.5,
-        background: "#eef2f5",
-        borderRadius: 8,
+        display: "flex",
+        alignItems: "flex-start",
+        gap: 6,
+        fontSize: "var(--fl-text-body-sm)",
+        fontFamily: "var(--fl-font-jp)",
+        background: "var(--fl-color-surface-alt)",
+        borderRadius: "var(--fl-radius-sm)",
         padding: "8px 10px",
         margin: "8px 0",
-        color: "var(--color-text-muted)",
+        color: "var(--fl-color-text-secondary)",
       }}
     >
-      ⓘ {text}
+      <span style={{ flexShrink: 0, marginTop: 2, color: "var(--fl-color-text-muted)" }}>
+        <InfoIcon size={13} />
+      </span>
+      {text}
     </p>
   );
 }

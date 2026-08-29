@@ -1,4 +1,6 @@
 import type { DropoutCurvePoint } from "../api/types";
+import Num from "./Num";
+import { TrendDownIcon } from "./icons";
 
 interface Props {
   curve: DropoutCurvePoint[];
@@ -27,7 +29,10 @@ export default function SingleAnimeDropoutCurve({
   if (insufficientData || !curve || curve.length === 0) {
     return (
       <div style={{ margin: "16px 0" }}>
-        <p className="muted">📉 この作品はデータが少なく、止まりやすい話数を表示できません</p>
+        <p style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "var(--fl-text-body-sm)", color: "var(--fl-color-text-muted)" }}>
+          <TrendDownIcon size={14} />
+          この作品はデータが少なく、止まりやすい話数を表示できません
+        </p>
       </div>
     );
   }
@@ -43,7 +48,20 @@ export default function SingleAnimeDropoutCurve({
 
   return (
     <div style={{ margin: "16px 0" }}>
-      <p className="section-title">📉 この作品で人が止まりやすい話数</p>
+      <p
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+          margin: "0 0 8px",
+          fontSize: "var(--fl-text-heading)",
+          fontWeight: 800,
+          fontFamily: "var(--fl-font-jp)",
+        }}
+      >
+        <TrendDownIcon size={15} />
+        この作品で人が止まりやすい話数
+      </p>
       <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} width="100%" role="img" aria-label="話数別の離脱傾向">
         {curve.map((p) => (
           <rect
@@ -52,7 +70,9 @@ export default function SingleAnimeDropoutCurve({
             y={y(p.rate)}
             width={barW}
             height={PAD_T + plotH - y(p.rate)}
-            fill={p.episode === 1 ? "#c9ced6" : p.episode === peakEpisode ? "var(--color-accent)" : "#9ec3e3"}
+            fill={p.episode === 1 ? "#d3d8e2" : p.episode === peakEpisode ? "var(--fl-color-warning)" : "var(--fl-color-primary-tint)"}
+            stroke={p.episode === peakEpisode ? "none" : "var(--fl-color-primary)"}
+            strokeOpacity={p.episode === peakEpisode || p.episode === 1 ? 0 : 0.35}
           />
         ))}
         {curve
@@ -64,19 +84,21 @@ export default function SingleAnimeDropoutCurve({
               y={HEIGHT - 4}
               fontSize={9}
               textAnchor="middle"
-              fill="var(--color-text-muted)"
+              fill="var(--fl-color-text-muted)"
+              fontFamily="var(--fl-font-numeric)"
             >
               {p.episode}話
             </text>
           ))}
       </svg>
       {peakEpisode != null && survivalAfterPeak != null && (
-        <p className="muted" style={{ marginTop: 4 }}>
-          {peakEpisode}話で止まる人が最多。ここを越えた人の{Math.round(survivalAfterPeak * 100)}%は最後まで見ています。
+        <p style={{ marginTop: 4, fontSize: "var(--fl-text-body-sm)", color: "var(--fl-color-text-secondary)" }}>
+          <Num size="sm">{peakEpisode}</Num>話で止まる人が最多。ここを越えた人の
+          <Num size="sm">{Math.round(survivalAfterPeak * 100)}</Num>%は最後まで見ています。
         </p>
       )}
       {curve.some((p) => p.episode === 1) && (
-        <p className="muted" style={{ marginTop: 2, fontSize: 11 }}>
+        <p style={{ marginTop: 2, fontSize: "var(--fl-text-caption)", color: "var(--fl-color-text-muted)" }}>
           ※ 1話（様子見離脱のため除外）はグレーで表示しています
         </p>
       )}

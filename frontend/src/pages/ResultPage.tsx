@@ -5,6 +5,7 @@ import type { PredictResponse } from "../api/types";
 import AtRiskBlock from "../components/AtRiskBlock";
 import BaselineComparisonBlock from "../components/BaselineComparisonBlock";
 import DropoutCurveChart from "../components/DropoutCurveChart";
+import { InfoIcon } from "../components/icons";
 import SingleJudgmentBlock from "../components/SingleJudgmentBlock";
 import TypeDiagnosisCard from "../components/TypeDiagnosisCard";
 import WillCompleteBlock from "../components/WillCompleteBlock";
@@ -57,8 +58,9 @@ export default function ResultPage() {
           style={{
             border: "none",
             background: "none",
-            color: "var(--color-primary)",
-            fontSize: 13,
+            color: "var(--fl-color-primary)",
+            fontSize: "var(--fl-text-body-sm)",
+            fontFamily: "var(--fl-font-jp)",
             padding: 0,
           }}
         >
@@ -67,13 +69,37 @@ export default function ResultPage() {
       </div>
 
       {!hasDropped && (
-        <p className="muted" style={{ margin: "8px 12px 0" }}>
-          ⓘ 途中で止まった作品の情報がないため、精度が限定的です
+        <p
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: 6,
+            margin: "8px 12px 0",
+            fontSize: "var(--fl-text-body-sm)",
+            color: "var(--fl-color-text-muted)",
+          }}
+        >
+          <span style={{ flexShrink: 0, marginTop: 2 }}>
+            <InfoIcon size={13} />
+          </span>
+          途中で止まった作品の情報がないため、精度が限定的です
         </p>
       )}
       {!hasCompleted && (
-        <p className="muted" style={{ margin: "8px 12px 0" }}>
-          ⓘ 完走した作品の情報がないため、精度が限定的です
+        <p
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: 6,
+            margin: "8px 12px 0",
+            fontSize: "var(--fl-text-body-sm)",
+            color: "var(--fl-color-text-muted)",
+          }}
+        >
+          <span style={{ flexShrink: 0, marginTop: 2 }}>
+            <InfoIcon size={13} />
+          </span>
+          完走した作品の情報がないため、精度が限定的です
         </p>
       )}
 

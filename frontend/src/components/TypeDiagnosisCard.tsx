@@ -1,19 +1,9 @@
 import type { ProfileOut } from "../api/types";
+import Num from "./Num";
 import { useGenreJp } from "../state/useGenreJp";
 
 interface Props {
   profile: ProfileOut;
-}
-
-/** 数字はInter・tabular-numsで統一し、装飾（グラデーション背景・斜体・絵文字併記）は
- * 一切加えない（docs/design_guidelines.md「パッケージはカラフルに、数字は硬派に」）。 */
-function Num({ children, size }: { children: React.ReactNode; size: "xl" | "lg" | "sm" }) {
-  const fontSize = size === "xl" ? "var(--fl-numeric-xl)" : size === "lg" ? "var(--fl-numeric-lg)" : "var(--fl-numeric-sm)";
-  return (
-    <span className="fl-numeric" style={{ fontSize }}>
-      {children}
-    </span>
-  );
 }
 
 /** [C] ブロック2: タイプ診断カード（UI仕様書4.4）。シェアされる想定の主役。 */
