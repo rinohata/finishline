@@ -62,5 +62,10 @@ export function useResponses() {
     });
   }, []);
 
-  return { responses, count: responses.length, getLabel, setLabel };
+  // 回答をすべて解除する（UI仕様書3.9）。確認ダイアログを経てから呼ぶこと。
+  const reset = useCallback(() => {
+    setResponses([]);
+  }, []);
+
+  return { responses, count: responses.length, getLabel, setLabel, reset };
 }

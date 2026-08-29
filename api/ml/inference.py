@@ -36,6 +36,7 @@ class UserProfileVectors:
     dropped_vector: np.ndarray | None
     user_mean_popularity: float | None
     genre_rate: dict[str, float]
+    genre_count: dict[str, int]
     n_input: int
 
 
@@ -64,11 +65,13 @@ def build_profile_vectors(store: DataStore, responses: list[Response]) -> UserPr
     user_mean_pop = float(np.mean(comp_pop)) if comp_pop else None
 
     genre_rate: dict[str, float] = {}
+    genre_count: dict[str, int] = {}
     for g in store.all_genres:
         c = sum(1 for r in responses if r.label == "completed" and g in r.genres)
         d = sum(1 for r in responses if r.label == "dropped" and g in r.genres)
         if c + d > 0:
             genre_rate[g] = c / (c + d)
+            genre_count[g] = c + d
 
     return UserProfileVectors(
         endurance_episodes=endurance,
@@ -79,6 +82,7 @@ def build_profile_vectors(store: DataStore, responses: list[Response]) -> UserPr
         dropped_vector=drop_vec,
         user_mean_popularity=user_mean_pop,
         genre_rate=genre_rate,
+        genre_count=genre_count,
         n_input=len(responses),
     )
 

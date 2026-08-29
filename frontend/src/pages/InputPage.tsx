@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchQuestions } from "../api/client";
 import type { QuestionItem, SortOption } from "../api/types";
+import ConfirmDialog from "../components/ConfirmDialog";
 import FilterBar, { type FilterState } from "../components/FilterBar";
 import FooterCTA from "../components/FooterCTA";
 import ProgressBar from "../components/ProgressBar";
@@ -14,7 +15,8 @@ const PAGE_SIZE = 20;
 
 export default function InputPage() {
   const navigate = useNavigate();
-  const { count, getLabel, setLabel } = useResponses();
+  const { count, getLabel, setLabel, reset } = useResponses();
+  const [confirmResetOpen, setConfirmResetOpen] = useState(false);
 
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<SortOption>("split_score");
@@ -101,8 +103,20 @@ export default function InputPage() {
         </div>
         <SortTabs value={sort} onChange={setSort} />
         <FilterBar value={filters} onChange={setFilters} />
-        <ProgressBar count={count} />
+        <ProgressBar count={count} onResetClick={() => setConfirmResetOpen(true)} />
       </div>
+
+      {confirmResetOpen && (
+        <ConfirmDialog
+          message="回答をすべて解除しますか？"
+          confirmLabel="解除する"
+          onConfirm={() => {
+            reset();
+            setConfirmResetOpen(false);
+          }}
+          onCancel={() => setConfirmResetOpen(false)}
+        />
+      )}
 
       {error && (
         <div className="error-banner">

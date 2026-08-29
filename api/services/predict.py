@@ -45,6 +45,13 @@ WILL_COMPLETE_MAX_ITEMS = 10
 WILL_COMPLETE_GENRE_CAP = 3
 WILL_COMPLETE_MIN_POOL_SIZE = 10
 
+# will_complete: relative_completion（母集団完走率に対する相対値）が1.0未満の作品は
+# 出さない。「一般平均より完走しにくい」作品を「あなたが完走できる作品」として
+# 見せるのは矛盾するため（例: 灰羽連盟86% vs 一般87%）。10件出せない場合でも
+# 質を優先し、件数を減らす（テストユーザー10人の実測では候補プールが十分大きく
+# 10件を切ることは無かったが、ジャンル多様化フィルタと組み合わさると起こりうる）。
+WILL_COMPLETE_MIN_RELATIVE_COMPLETION = 1.0
+
 # 前提条件チェック: 直接のprequelが存在し、ユーザーがそのどれも回答していない作品は
 # 「前作を知らないのに続編を薦める」ことになるため候補から除外する。
 # ただし対象作品のMembers（登録者数）が全prequelのMembersのPREREQUISITE_MEMBERS_RATIO倍
@@ -287,6 +294,12 @@ def build_predict_response(store: DataStore, raw_responses: list[dict]) -> dict:
             zip(will_complete_candidates, wc_completion),
             key=lambda x: -_relative_completion(float(x[1]), store.population_completion_rate(x[0])),
         )
+        # relative_completionが1.0未満（一般平均より完走しにくい）の作品は出さない
+        wc_scored = [
+            (aid, prob) for aid, prob in wc_scored
+            if _relative_completion(float(prob), store.population_completion_rate(aid))
+            >= WILL_COMPLETE_MIN_RELATIVE_COMPLETION
+        ]
         # 修正4: 主ジャンルごとの上限3件とする貪欲法で多様性を確保する
         will_complete_ids = _select_diverse_will_complete(wc_scored, store)
 

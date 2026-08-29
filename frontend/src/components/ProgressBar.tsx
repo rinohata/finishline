@@ -1,5 +1,6 @@
 interface Props {
   count: number;
+  onResetClick?: () => void;
 }
 
 function message(count: number): string {
@@ -10,8 +11,8 @@ function message(count: number): string {
   return "精度：高。十分です";
 }
 
-/** UI仕様書3.6。20本を超えたら追加を促さない。 */
-export default function ProgressBar({ count }: Props) {
+/** UI仕様書3.6。20本を超えたら追加を促さない。3.9: 回答が0件のときはリセットボタンを隠す。 */
+export default function ProgressBar({ count, onResetClick }: Props) {
   const filled = Math.min(count, 20);
   const segments = 10;
   const filledSegments = Math.round((filled / 20) * segments);
@@ -35,6 +36,25 @@ export default function ProgressBar({ count }: Props) {
             />
           ))}
         </div>
+        {count > 0 && onResetClick && (
+          <button
+            type="button"
+            onClick={onResetClick}
+            style={{
+              flexShrink: 0,
+              padding: "5px 10px",
+              borderRadius: 999,
+              border: "1px solid var(--color-border)",
+              background: "var(--color-surface)",
+              color: "var(--color-text-muted)",
+              fontSize: 12,
+              fontWeight: 600,
+              whiteSpace: "nowrap",
+            }}
+          >
+            リセット
+          </button>
+        )}
       </div>
       <p className="muted" style={{ margin: "4px 0 0" }}>
         {message(count)}
