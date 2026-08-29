@@ -60,14 +60,22 @@ npm run dev
 | ファイル | サイズ目安 | 必要な作業 |
 |---|---|---|
 | `anime.csv` | 数MB | API 起動・全ノートブック（作品メタデータの起点。これが無いと起動不可） |
-| `anime_with_synopsis.csv` | 6.9MB | `notebooks/02_model.ipynb` のあらすじ埋め込み生成（`data/processed/anime_embeddings.npy` のキャッシュが無い場合のみ） |
-| `animelist.csv` | 1.9GB（約1億900万行） | `notebooks/00〜02` のユーザー行動データ集計全般。`data/processed/` 配下のほとんどのルックアップ（訓練ユーザーのみで算出する作品平均完走率など、`CLAUDE.md` のデータリーク防止規定に対応）の再生成に必須 |
+| `anime_with_synopsis.csv` | 6.9MB | あらすじ埋め込み生成（`data/processed/anime_embeddings.npy` のキャッシュが無い場合のみ） |
+| `animelist.csv` | 1.9GB（約1億900万行） | ユーザー行動データ集計全般。`data/processed/` 配下のほとんどのルックアップ（訓練ユーザーのみで算出する作品平均完走率など、`CLAUDE.md` のデータリーク防止規定に対応）の再生成に必須 |
+| `anilist/anilist_anime_data_complete.pkl` | 257MB | 続編/前作（franchise）判定用。取得元は別データセット: [calebmwelsh/anilist-anime-dataset](https://www.kaggle.com/datasets/calebmwelsh/anilist-anime-dataset)（AniList GraphQL API由来）。`scripts/build_relations.py`が`~/.kaggle/kaggle.json`の認証情報を使って自動ダウンロードするため、事前に`kaggle datasets download`で手動配置する必要は無い（`kaggle`パッケージと認証情報のみ用意すればよい） |
 
-`data/processed/` も `.gitignore` 対象で、上記ノートブックの実行により生成される。
+`data/processed/` も `.gitignore` 対象で、以下のスクリプトの実行により生成される（`notebooks/`はPhase検証時の実験用で、本番の再生成には使わない。詳細は `CLAUDE.md`「再現性」節・`reports/data_recovery.md`・`reports/franchise_prerequisite.md` を参照）。
+
+```bash
+python3 -m scripts.build_lookups     # data/processed/ のルックアップ・埋め込み一式
+python3 -m scripts.train_model       # models/dropout_predictor.lgb の再学習
+python3 -m scripts.build_relations   # data/processed/anime_relations.json（続編/前作関係）
+```
 
 ## データ出典・ライセンス
 
 - データ出典: Hernan4444 / anime-recommendation-database-2020 (Kaggle)
-- 元データ提供: MyAnimeList, Jikan API
+- 続編/前作関係のデータ出典: calebmwelsh / anilist-anime-dataset (Kaggle, AniList GraphQL API由来)
+- 元データ提供: MyAnimeList, AniList, Jikan API
 - Kaggle のデータセットページに記載のライセンス条件に従うこと
 - 本プロジェクトは非商用・ポートフォリオ用途である
