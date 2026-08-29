@@ -45,6 +45,43 @@ WILL_COMPLETE_MAX_ITEMS = 10
 WILL_COMPLETE_GENRE_CAP = 3
 WILL_COMPLETE_MIN_POOL_SIZE = 10
 
+# 前提条件チェック: 直接のprequelが存在し、ユーザーがそのどれも回答していない作品は
+# 「前作を知らないのに続編を薦める」ことになるため候補から除外する。
+# ただし対象作品のMembers（登録者数）が全prequelのMembersのPREREQUISITE_MEMBERS_RATIO倍
+# 以上ある場合は、対象作品自体が実質的なシリーズの入り口とみなし除外しない
+# （例: 進撃の巨人1期の直接prequelが配信専用OVA「悔いなき選択」になっているが、
+# 誰もがまずTVシリーズ1期から見る）。
+# 倍率7: 8では進撃の巨人1期（実測7.8369倍）を含む本命ケースを救済できなかったため、
+# 7と8の差分2件（進撃の巨人1期 vs 悔いなき選択OVA、Another vs The Other - Inga）の
+# 中身を確認した上で7に決めた。両方とも「OVAは本編を補完するサイドコンテンツで
+# 視聴の前提条件ではない」という同じ構造で、救済して問題ない事例だった
+# （reports/franchise_prerequisite.md 参照）。
+# 6以下にさらに下げないのは、その差分の中身を未確認のため
+# （過剰救済＝本当に前提が必要な続編まで通してしまうリスクを避ける）。
+PREREQUISITE_MEMBERS_RATIO = 7
+
+
+def _passes_prerequisite_check(store: DataStore, anime_id: int, answered_ids: set[int]) -> bool:
+    """前提条件チェックを通過するか（True=候補に残す、False=除外）。
+
+    anime_relations.json に無い作品・prequelを持たない作品は常に通す（判定不能・該当なし）。
+    複数prequelがある場合は、Members比率で救済されない「実質的な前提作品」のうち
+    1本でも回答済みであれば通す（全prequelを見ていることまでは要求しない）。
+    """
+    entry = store.anime_relations.get(anime_id)
+    if entry is None or not entry["prequels"]:
+        return True
+
+    cand_members = store.members(anime_id)
+    effective_prequels = [
+        p for p in entry["prequels"]
+        if cand_members < PREREQUISITE_MEMBERS_RATIO * store.members(p)
+    ]
+    if not effective_prequels:
+        return True  # 全prequelがMembers比率ルールで救済された
+
+    return any(p in answered_ids for p in effective_prequels)
+
 
 def _has_meaningful_peak(store: DataStore, curve_entry: dict | None, total_episodes: int | None) -> bool:
     if curve_entry is None or curve_entry.get("insufficient_data"):
@@ -115,6 +152,7 @@ def _will_complete_candidate_pool(store: DataStore, answered_ids: set[int], best
         and (store.episodes(aid) or 0) > WILL_COMPLETE_MIN_EPISODES
         and store.members(aid) >= WILL_COMPLETE_MIN_MEMBERS
         and (store.score(aid) or 0) >= WILL_COMPLETE_MIN_SCORE
+        and _passes_prerequisite_check(store, aid, answered_ids)
     ]
 
     if best_bucket is None:
@@ -196,6 +234,7 @@ def build_predict_response(store: DataStore, raw_responses: list[dict]) -> dict:
     at_risk_candidates = [
         aid for aid in store.top300_by_registration
         if aid not in answered_ids and not store.is_ongoing(aid)
+        and _passes_prerequisite_check(store, aid, answered_ids)
     ]
     at_risk_preds = predict_dropped_prob(store, profile_vectors, at_risk_candidates)
     at_risk_scored = sorted(zip(at_risk_candidates, 1 - at_risk_preds), key=lambda x: x[1])

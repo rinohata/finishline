@@ -88,6 +88,18 @@ class DataStore:
         with open(PROC_DIR / "population_stats.json", encoding="utf-8") as f:
             self.population_stats = json.load(f)
 
+        # anime_relations.json は scripts/build_relations.py の出力（続編/前作の直接関係）。
+        # 他のprocessedファイルと異なり任意（無くても起動できる）とする。
+        # Jikan API /relations が現状不安定で今後もデータが揃うとは限らないため、
+        # 「無ければ前提条件チェックを一切適用しない」という安全側の劣化にする。
+        relations_path = PROC_DIR / "anime_relations.json"
+        if relations_path.exists():
+            with open(relations_path, encoding="utf-8") as f:
+                raw = json.load(f)
+            self.anime_relations = {int(k): v for k, v in raw.items()}
+        else:
+            self.anime_relations = {}
+
         emb = np.load(PROC_DIR / "anime_embeddings.npy")
         emb_ids = np.load(PROC_DIR / "anime_embeddings_ids.npy")
         self.embeddings = {int(aid): emb[i] for i, aid in enumerate(emb_ids)}
